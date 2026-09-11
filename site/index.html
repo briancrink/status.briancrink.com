@@ -503,7 +503,7 @@
       const ampm = hours >= 12 ? 'pm' : 'am';
       hours = hours % 12 || 12;
       const tz = date.toLocaleTimeString('en-US', { timeZoneName: 'short' }).split(' ').pop();
-      return `Last updated ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${hours}:${minutes}${ampm} ${tz}`;
+      return `Updated: ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${hours}:${minutes}${ampm} ${tz}`;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
