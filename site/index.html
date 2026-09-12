@@ -21,28 +21,34 @@
       --tool-collapse: 138px;
       --scroll-cancel: 0px;
       --chrome-expanded: 420px;
+      --page-bg: #000000;
+      --page-fg: #ffffff;
     }
 
     html, body {
       min-height: 100%;
       min-height: 50dvh;
       overflow-x: hidden;
+      background-color: var(--page-bg);
+      color: var(--page-fg);
+    }
+
+    html, body, .header, .container, .page-flow {
+      background-color: var(--page-bg);
+      transition: background-color 0.45s ease, color 0.45s ease;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #000000;
-      color: #ffffff;
       line-height: 1.6;
-      transition: background 0.4s, color 0.4s;
       opacity: 0;
       animation: fadeIn 1.3s forwards;
       padding: 0;
     }
 
     body.light {
-      background: #ffffff;
-      color: #1a1a1a;
+      --page-bg: #ffffff;
+      --page-fg: #1a1a1a;
     }
 
     @keyframes fadeIn {
@@ -70,18 +76,11 @@
       z-index: 30;
       width: 100%;
       padding: 10px 16px 12px;
-      background: #000000;
-    }
-
-    body.light .header {
-      background: #ffffff;
     }
 
     .page-flow {
       width: 100%;
       padding-top: var(--chrome-expanded);
-      transform: translate3d(0, calc(var(--hero-compact) * var(--tool-collapse) * -1 + var(--scroll-cancel)), 0);
-      will-change: transform;
     }
 
     .divider {
@@ -339,6 +338,10 @@
 
     .toggle-option.inactive {
       color: #aaaaaa;
+    }
+
+    body.light .toggle-option.inactive {
+      color: #4b5563;
     }
 
     .legend {
@@ -635,6 +638,10 @@
       background: #f3f4f6;
       color: #4b5563;
       border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    body.light .live-pill[data-live="planned"] {
+      color: #4b5563;
     }
 
     body[data-view="development"] .links .live-pill { display: none; }
@@ -1012,10 +1019,8 @@
 
     function measureChrome() {
       if (!mapHeader) return;
-      const compact = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hero-compact')) || 0;
-      const collapse = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--tool-collapse')) || 0;
-      const h = mapHeader.getBoundingClientRect().height + compact * collapse + 16;
-      document.documentElement.style.setProperty('--chrome-expanded', Math.ceil(h) + 'px');
+      const h = mapHeader.getBoundingClientRect().height + 20;
+      document.documentElement.style.setProperty('--chrome-expanded', Math.max(280, Math.ceil(h)) + 'px');
     }
 
     function syncHeroCompact() {
