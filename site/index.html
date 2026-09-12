@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="../resources/images/icons/apple-touch-icon.png">
   <link rel="apple-touch-icon" href="../resources/images/icons/apple-touch-icon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://site.briancrink.com/map">
-  <title>Site Status | Brian Crink</title>
+  <title>Site Map | Brian Crink</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -311,7 +311,7 @@
       z-index: 1;
     }
 
-    .mode-toggle.status .toggle-slider {
+    .mode-toggle.availability .toggle-slider {
       background: #22c55e;
     }
 
@@ -427,7 +427,7 @@
     body.light .legend { color: rgba(26, 26, 26, 0.45); }
 
     body[data-view="development"] .legend-status,
-    body[data-view="status"] .legend-dev {
+    body[data-view="availability"] .legend-dev {
       display: none;
     }
 
@@ -490,8 +490,8 @@
       width: 100%;
     }
 
-    body[data-view="status"] .page-row,
-    body[data-view="status"] .domain-row {
+    body[data-view="availability"] .page-row,
+    body[data-view="availability"] .domain-row {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
@@ -638,9 +638,9 @@
     }
 
     body[data-view="development"] .links .live-pill { display: none; }
-    body[data-view="status"] .links .dev-pill,
-    body[data-view="status"] .links .version-pill,
-    body[data-view="status"] .links .system-tag { display: none; }
+    body[data-view="availability"] .links .dev-pill,
+    body[data-view="availability"] .links .version-pill,
+    body[data-view="availability"] .links .system-tag { display: none; }
 
     .theme-toggle {
       position: fixed;
@@ -712,7 +712,7 @@
           <div class="mode-toggle" id="modeToggle" role="tablist" aria-label="Map view">
             <div class="toggle-slider" id="toggleSlider"></div>
             <button type="button" class="toggle-option active" id="tab-development" role="tab" data-view="development" aria-selected="true">Development</button>
-            <button type="button" class="toggle-option inactive" id="tab-status" role="tab" data-view="status" aria-selected="false">Status</button>
+            <button type="button" class="toggle-option inactive" id="tab-availability" role="tab" data-view="availability" aria-selected="false">Availability</button>
           </div>
           <div class="legend" role="group" aria-label="Filter by tag">
             <div class="legend-row">
@@ -768,7 +768,7 @@
 
     const modeToggle = document.getElementById('modeToggle');
     const devTab = document.getElementById('tab-development');
-    const statusTab = document.getElementById('tab-status');
+    const availabilityTab = document.getElementById('tab-availability');
     let lastMapData = null;
     let tagFilter = null;
 
@@ -779,19 +779,19 @@
     }
 
     function setView(view) {
-      const next = view === 'status' ? 'status' : 'development';
+      const next = view === 'availability' ? 'availability' : 'development';
       body.dataset.view = next;
-      modeToggle.classList.toggle('status', next === 'status');
+      modeToggle.classList.toggle('availability', next === 'availability');
       devTab.classList.toggle('active', next === 'development');
       devTab.classList.toggle('inactive', next !== 'development');
-      statusTab.classList.toggle('active', next === 'status');
-      statusTab.classList.toggle('inactive', next !== 'status');
+      availabilityTab.classList.toggle('active', next === 'availability');
+      availabilityTab.classList.toggle('inactive', next !== 'availability');
       devTab.setAttribute('aria-selected', next === 'development' ? 'true' : 'false');
-      statusTab.setAttribute('aria-selected', next === 'status' ? 'true' : 'false');
-      const hash = next === 'status' ? '#status' : '#development';
+      availabilityTab.setAttribute('aria-selected', next === 'availability' ? 'true' : 'false');
+      const hash = next === 'availability' ? '#availability' : '#development';
       if (location.hash !== hash) history.replaceState(null, '', hash);
       if (tagFilter) {
-        const ok = next === 'status' ? tagFilter.type === 'live' : (tagFilter.type === 'dev' || tagFilter.type === 'version' || tagFilter.type === 'category');
+        const ok = next === 'availability' ? tagFilter.type === 'live' : (tagFilter.type === 'dev' || tagFilter.type === 'version' || tagFilter.type === 'category');
         if (!ok) tagFilter = null;
       }
       syncLegendActive();
@@ -807,7 +807,7 @@
       if (e.target.closest('input, textarea, [contenteditable="true"]')) return;
       if (e.key === 'ArrowRight') {
         e.preventDefault();
-        setView('status');
+        setView('availability');
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         setView('development');
@@ -815,7 +815,7 @@
     });
 
     function viewFromHash() {
-      return location.hash === '#status' ? 'status' : 'development';
+      return location.hash === '#availability' ? 'availability' : 'development';
     }
 
     const LIVE_LABEL = {
