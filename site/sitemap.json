@@ -7,11 +7,11 @@
       "statuses": [
         "planned",
         "in-development",
-        "completed"
+        "released"
       ]
     },
-    "status": {
-      "label": "Status",
+    "availability": {
+      "label": "Availability",
       "statuses": [
         "live",
         "maintenance",
@@ -32,9 +32,6 @@
         "version": "v1.0.0",
         "category": "Identity"
       },
-      "live": {
-        "status": "live"
-      },
       "pages": [
         {
           "title": "Academia",
@@ -45,7 +42,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -58,7 +55,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -71,7 +68,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -84,7 +81,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -97,7 +94,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -110,7 +107,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -123,7 +120,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -136,7 +133,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -149,7 +146,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -162,7 +159,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -175,7 +172,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -188,7 +185,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -201,7 +198,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -214,7 +211,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -227,7 +224,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -240,7 +237,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -253,7 +250,7 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -266,11 +263,14 @@
             "version": "v1.0.0",
             "category": "Identity"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "live"
+      }
     },
     {
       "subdomain": "academia",
@@ -282,9 +282,6 @@
         "version": "v0.1.0",
         "category": "Academia"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Academic History",
@@ -295,7 +292,7 @@
             "version": "v0.1.0",
             "category": "Academia"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -308,7 +305,7 @@
             "version": "v0.1.0",
             "category": "Academia"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -321,11 +318,14 @@
             "version": "v0.1.0",
             "category": "Academia"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "api",
@@ -337,9 +337,6 @@
         "version": "v0.1.0",
         "category": "Platform"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "API Docs",
@@ -350,7 +347,7 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -363,7 +360,7 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -376,7 +373,7 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -389,7 +386,7 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -402,7 +399,7 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -415,11 +412,14 @@
             "version": "v0.1.0",
             "category": "Platform"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "app",
@@ -431,9 +431,6 @@
         "version": "v0.1.0",
         "category": "Apps"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -444,7 +441,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -457,7 +454,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -470,7 +467,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -483,11 +480,14 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "apps",
@@ -499,9 +499,6 @@
         "version": "v0.1.0",
         "category": "Apps"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -512,7 +509,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -525,7 +522,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -538,7 +535,7 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -551,11 +548,14 @@
             "version": "v0.1.0",
             "category": "Apps"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "business",
@@ -567,9 +567,6 @@
         "version": "v0.1.0",
         "category": "Commerce"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -580,7 +577,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -593,7 +590,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -606,7 +603,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -619,7 +616,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -632,7 +629,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -645,7 +642,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -658,7 +655,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -671,7 +668,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -684,7 +681,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -697,11 +694,14 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "career",
@@ -713,9 +713,6 @@
         "version": "v0.1.0",
         "category": "Career"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Career Development",
@@ -726,7 +723,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -739,7 +736,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -752,7 +749,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -765,7 +762,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -778,7 +775,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -791,7 +788,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -804,7 +801,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -817,7 +814,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -830,7 +827,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -843,7 +840,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -856,7 +853,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -869,7 +866,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -882,7 +879,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -895,11 +892,14 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "contact",
@@ -911,9 +911,6 @@
         "version": "v0.1.0",
         "category": "Contact"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Career",
@@ -924,7 +921,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -937,7 +934,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -950,7 +947,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -963,7 +960,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -976,7 +973,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -989,7 +986,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1002,7 +999,7 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1015,11 +1012,14 @@
             "version": "v0.1.0",
             "category": "Contact"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "dev",
@@ -1031,9 +1031,6 @@
         "version": "v1.0.0",
         "category": "Development"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Apps",
@@ -1044,7 +1041,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1057,7 +1054,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1070,7 +1067,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1083,7 +1080,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1096,7 +1093,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1109,7 +1106,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1122,7 +1119,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1135,7 +1132,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1148,7 +1145,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1161,7 +1158,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1174,7 +1171,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1187,7 +1184,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1200,7 +1197,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1213,7 +1210,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1226,7 +1223,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1239,7 +1236,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1252,7 +1249,7 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1265,11 +1262,14 @@
             "version": "v1.0.0",
             "category": "Development"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "feed",
@@ -1281,9 +1281,6 @@
         "version": "v1.0.0",
         "category": "Content"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Auto",
@@ -1294,7 +1291,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1307,7 +1304,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1320,7 +1317,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1333,7 +1330,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1346,7 +1343,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1359,7 +1356,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1372,7 +1369,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1385,7 +1382,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1398,7 +1395,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1411,7 +1408,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1424,7 +1421,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1437,7 +1434,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1450,7 +1447,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1463,7 +1460,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1476,7 +1473,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1489,7 +1486,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1502,7 +1499,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1515,7 +1512,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1528,7 +1525,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1541,7 +1538,7 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1554,11 +1551,14 @@
             "version": "v1.0.0",
             "category": "Content"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "hire",
@@ -1570,9 +1570,6 @@
         "version": "v1.0.0",
         "category": "Career"
       },
-      "live": {
-        "status": "live"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -1583,7 +1580,7 @@
             "version": "v1.0.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1596,7 +1593,7 @@
             "version": "v1.0.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1609,7 +1606,7 @@
             "version": "v1.0.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1622,11 +1619,14 @@
             "version": "v1.0.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "live"
+      }
     },
     {
       "subdomain": "home",
@@ -1638,9 +1638,6 @@
         "version": "v0.1.0",
         "category": "Life"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Home Build",
@@ -1651,7 +1648,7 @@
             "version": "v0.1.0",
             "category": "Life"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1664,11 +1661,14 @@
             "version": "v0.1.0",
             "category": "Life"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "jobs",
@@ -1680,9 +1680,6 @@
         "version": "v0.1.0",
         "category": "Career"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Dashboard",
@@ -1693,7 +1690,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1706,7 +1703,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1719,7 +1716,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1732,7 +1729,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1745,7 +1742,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1758,7 +1755,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1771,7 +1768,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1784,7 +1781,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1797,7 +1794,7 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1810,11 +1807,14 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "os",
@@ -1826,9 +1826,6 @@
         "version": "v1.0.0",
         "category": "Systems"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "BossOS",
@@ -1839,7 +1836,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1852,7 +1849,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1865,7 +1862,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1878,11 +1875,14 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "portal",
@@ -1894,9 +1894,6 @@
         "version": "v1.0.0",
         "category": "Systems"
       },
-      "live": {
-        "status": "live"
-      },
       "pages": [
         {
           "title": "BossOS",
@@ -1907,7 +1904,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1920,7 +1917,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1933,7 +1930,7 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -1946,11 +1943,14 @@
             "version": "v1.0.0",
             "category": "Systems"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "live"
+      }
     },
     {
       "subdomain": "resources",
@@ -1962,9 +1962,6 @@
         "version": "v1.0.0",
         "category": "Kit"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Dev Resources",
@@ -1975,7 +1972,7 @@
             "version": "v1.0.0",
             "category": "Kit"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -1988,7 +1985,7 @@
             "version": "v1.0.0",
             "category": "Kit"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2001,11 +1998,14 @@
             "version": "v1.0.0",
             "category": "Kit"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "shop",
@@ -2017,9 +2017,6 @@
         "version": "v0.1.0",
         "category": "Commerce"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -2030,7 +2027,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2043,7 +2040,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2056,7 +2053,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2069,7 +2066,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2082,11 +2079,14 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "site",
@@ -2098,9 +2098,6 @@
         "version": "v1.0.0",
         "category": "Site"
       },
-      "live": {
-        "status": "live"
-      },
       "pages": [
         {
           "title": "Cookie Policy",
@@ -2111,7 +2108,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2124,7 +2121,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2137,7 +2134,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2150,7 +2147,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2163,7 +2160,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2176,7 +2173,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2189,7 +2186,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2202,7 +2199,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2215,7 +2212,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2228,7 +2225,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2241,7 +2238,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2254,7 +2251,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2267,7 +2264,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2280,7 +2277,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2293,7 +2290,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2306,7 +2303,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2319,7 +2316,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2332,7 +2329,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2345,7 +2342,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2358,7 +2355,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2371,7 +2368,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2384,7 +2381,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2397,7 +2394,7 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2410,11 +2407,14 @@
             "version": "v1.0.0",
             "category": "Site"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "live"
+      }
     },
     {
       "subdomain": "social",
@@ -2426,9 +2426,6 @@
         "version": "v1.0.0",
         "category": "Social"
       },
-      "live": {
-        "status": "live"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -2439,7 +2436,7 @@
             "version": "v1.0.0",
             "category": "Social"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2452,7 +2449,7 @@
             "version": "v1.0.0",
             "category": "Social"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2465,7 +2462,7 @@
             "version": "v1.0.0",
             "category": "Social"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2478,7 +2475,7 @@
             "version": "v1.0.0",
             "category": "Social"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         },
@@ -2491,11 +2488,14 @@
             "version": "v1.0.0",
             "category": "Social"
           },
-          "live": {
+          "availability": {
             "status": "live"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "live"
+      }
     },
     {
       "subdomain": "space",
@@ -2507,9 +2507,6 @@
         "version": "v0.1.0",
         "category": "Spaces"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Beach Space",
@@ -2520,7 +2517,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2533,7 +2530,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2546,7 +2543,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2559,7 +2556,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2572,7 +2569,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2585,7 +2582,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2598,7 +2595,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2611,7 +2608,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2624,7 +2621,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2637,7 +2634,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2650,7 +2647,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2663,7 +2660,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2676,7 +2673,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2689,7 +2686,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2702,7 +2699,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2715,7 +2712,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2728,7 +2725,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2741,7 +2738,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2754,7 +2751,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2767,7 +2764,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2780,7 +2777,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2793,7 +2790,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2806,7 +2803,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2819,7 +2816,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2832,7 +2829,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2845,7 +2842,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2858,7 +2855,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2871,7 +2868,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2884,7 +2881,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2897,7 +2894,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2910,7 +2907,7 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2923,11 +2920,14 @@
             "version": "v0.1.0",
             "category": "Spaces"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "store",
@@ -2939,9 +2939,6 @@
         "version": "v0.1.0",
         "category": "Commerce"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Contact",
@@ -2952,7 +2949,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2965,7 +2962,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2978,7 +2975,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -2991,7 +2988,7 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3004,11 +3001,14 @@
             "version": "v0.1.0",
             "category": "Commerce"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "support",
@@ -3020,9 +3020,6 @@
         "version": "v0.1.0",
         "category": "Support"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "App Support",
@@ -3033,7 +3030,7 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3046,7 +3043,7 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3059,7 +3056,7 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3072,7 +3069,7 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3085,7 +3082,7 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3098,11 +3095,14 @@
             "version": "v0.1.0",
             "category": "Support"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "tech",
@@ -3114,9 +3114,6 @@
         "version": "v0.1.0",
         "category": "Tech"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "Employment",
@@ -3127,7 +3124,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3140,7 +3137,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3153,7 +3150,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3166,7 +3163,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3179,7 +3176,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3192,7 +3189,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3205,7 +3202,7 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3218,11 +3215,14 @@
             "version": "v0.1.0",
             "category": "Tech"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     },
     {
       "subdomain": "websites",
@@ -3234,9 +3234,6 @@
         "version": "v0.1.0",
         "category": "Sites"
       },
-      "live": {
-        "status": "planned"
-      },
       "pages": [
         {
           "title": "access.edu",
@@ -3247,7 +3244,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3260,7 +3257,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3273,7 +3270,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3286,7 +3283,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3299,7 +3296,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3312,7 +3309,7 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         },
@@ -3325,11 +3322,14 @@
             "version": "v0.1.0",
             "category": "Sites"
           },
-          "live": {
+          "availability": {
             "status": "planned"
           }
         }
-      ]
+      ],
+      "availability": {
+        "status": "planned"
+      }
     }
   ]
 }

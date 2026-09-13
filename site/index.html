@@ -364,7 +364,7 @@
     }
 
     .legend .dev-pill,
-    .legend .live-pill,
+    .legend .availability-pill,
     .legend .version-pill,
     .legend .system-tag {
       appearance: none;
@@ -374,7 +374,7 @@
     }
 
     .legend .dev-pill:hover,
-    .legend .live-pill:hover,
+    .legend .availability-pill:hover,
     .legend .version-pill:hover,
     .legend .system-tag:hover {
       opacity: 0.85;
@@ -390,27 +390,27 @@
       color: #0c4a6e;
     }
 
-    .legend .dev-pill.is-active[data-dev="completed"] {
+    .legend .dev-pill.is-active[data-dev="released"] {
       background: #4ade80;
       color: #14532d;
     }
 
-    .legend .live-pill.is-active[data-live="live"] {
+    .legend .availability-pill.is-active[data-availability="live"] {
       background: #4ade80;
       color: #14532d;
     }
 
-    .legend .live-pill.is-active[data-live="maintenance"] {
+    .legend .availability-pill.is-active[data-availability="maintenance"] {
       background: #fbbf24;
       color: #78350f;
     }
 
-    .legend .live-pill.is-active[data-live="down"] {
+    .legend .availability-pill.is-active[data-availability="down"] {
       background: #f87171;
       color: #7f1d1d;
     }
 
-    .legend .live-pill.is-active[data-live="planned"] {
+    .legend .availability-pill.is-active[data-availability="planned"] {
       background: #d1d5db;
       color: #111827;
     }
@@ -523,7 +523,7 @@
 
     .sub-page-link:hover { opacity: 0.85; }
 
-    .live-dot {
+    .availability-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -531,11 +531,11 @@
       background: #6b7280;
     }
 
-    .live-dot[data-live="live"] { background: #22c55e; }
-    .live-dot[data-live="maintenance"] { background: #f59e0b; }
-    .live-dot[data-live="unresponsive"],
-    .live-dot[data-live="down"] { background: #ef4444; }
-    .live-dot[data-live="planned"] { background: #6b7280; }
+    .availability-dot[data-availability="live"] { background: #22c55e; }
+    .availability-dot[data-availability="maintenance"] { background: #f59e0b; }
+    .availability-dot[data-availability="unresponsive"],
+    .availability-dot[data-availability="down"] { background: #ef4444; }
+    .availability-dot[data-availability="planned"] { background: #6b7280; }
 
     .dev-pill,
     .version-pill,
@@ -565,13 +565,13 @@
       border: 1px solid rgba(125, 211, 252, 0.32);
     }
 
-    .dev-pill[data-dev="completed"] {
+    .dev-pill[data-dev="released"] {
       background: rgba(34, 197, 94, 0.16);
       color: #4ade80;
       border: 1px solid rgba(34, 197, 94, 0.28);
     }
 
-    .live-pill {
+    .availability-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -585,26 +585,26 @@
       font-family: ui-monospace, "SF Mono", Menlo, Monaco, "Courier New", monospace;
     }
 
-    .live-pill[data-live="live"] {
+    .availability-pill[data-availability="live"] {
       background: rgba(39, 201, 63, 0.16);
       color: #4ade80;
       border: 1px solid rgba(39, 201, 63, 0.32);
     }
 
-    .live-pill[data-live="maintenance"] {
+    .availability-pill[data-availability="maintenance"] {
       background: rgba(245, 158, 11, 0.16);
       color: #fbbf24;
       border: 1px solid rgba(245, 158, 11, 0.28);
     }
 
-    .live-pill[data-live="unresponsive"],
-    .live-pill[data-live="down"] {
+    .availability-pill[data-availability="unresponsive"],
+    .availability-pill[data-availability="down"] {
       background: rgba(239, 68, 68, 0.16);
       color: #f87171;
       border: 1px solid rgba(239, 68, 68, 0.28);
     }
 
-    .live-pill[data-live="planned"] {
+    .availability-pill[data-availability="planned"] {
       background: rgba(107, 114, 128, 0.18);
       color: #d1d5db;
       border: 1px solid rgba(107, 114, 128, 0.28);
@@ -640,11 +640,11 @@
       border-color: rgba(0, 0, 0, 0.08);
     }
 
-    body.light .live-pill[data-live="planned"] {
+    body.light .availability-pill[data-availability="planned"] {
       color: #4b5563;
     }
 
-    body[data-view="development"] .links .live-pill { display: none; }
+    body[data-view="development"] .links .availability-pill { display: none; }
     body[data-view="availability"] .links .dev-pill,
     body[data-view="availability"] .links .version-pill,
     body[data-view="availability"] .links .system-tag { display: none; }
@@ -725,11 +725,11 @@
             <div class="legend-row">
               <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="planned">Planned</button>
               <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="in-development">In Development</button>
-              <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="completed">Completed</button>
-              <button type="button" class="legend-status live-pill" data-filter-type="live" data-live="live"><span class="live-dot" data-live="live"></span>Live</button>
-              <button type="button" class="legend-status live-pill" data-filter-type="live" data-live="maintenance"><span class="live-dot" data-live="maintenance"></span>Maintenance</button>
-              <button type="button" class="legend-status live-pill" data-filter-type="live" data-live="down"><span class="live-dot" data-live="down"></span>Down</button>
-              <button type="button" class="legend-status live-pill" data-filter-type="live" data-live="planned"><span class="live-dot" data-live="planned"></span>Unlisted</button>
+              <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="released">Released</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="live"><span class="availability-dot" data-availability="live"></span>Live</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="maintenance"><span class="availability-dot" data-availability="maintenance"></span>Maintenance</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="down"><span class="availability-dot" data-availability="down"></span>Down</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="planned"><span class="availability-dot" data-availability="planned"></span>Unlisted</button>
             </div>
             <div class="legend-row legend-categories legend-dev" id="legendCategories"></div>
             <div class="legend-row legend-versions legend-dev" id="legendVersions"></div>
@@ -742,8 +742,6 @@
     <div class="page-flow" id="pageFlow">
       <div class="links" id="sitemap-links"></div>
     </div>
-
-    <script src="sitemap.js"></script>
 
     <button class="theme-toggle" id="theme-toggle" type="button" tabindex="-1">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.15"/><line x1="12" y1="2.4" x2="12" y2="5.1"/><line x1="12" y1="18.9" x2="12" y2="21.6"/><line x1="2.4" y1="12" x2="5.1" y2="12"/><line x1="18.9" y1="12" x2="21.6" y2="12"/><line x1="5.2" y1="5.2" x2="7.1" y2="7.1"/><line x1="16.9" y1="16.9" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="16.9" y2="7.1"/><line x1="7.1" y1="16.9" x2="5.2" y2="18.8"/></svg>
@@ -770,7 +768,7 @@
     const DEV_LABEL = {
       planned: 'Planned',
       'in-development': 'In Development',
-      completed: 'Completed'
+      released: 'Released'
     };
 
     const modeToggle = document.getElementById('modeToggle');
@@ -798,7 +796,7 @@
       const hash = next === 'availability' ? '#availability' : '#development';
       if (location.hash !== hash) history.replaceState(null, '', hash);
       if (tagFilter) {
-        const ok = next === 'availability' ? tagFilter.type === 'live' : (tagFilter.type === 'dev' || tagFilter.type === 'version' || tagFilter.type === 'category');
+        const ok = next === 'availability' ? tagFilter.type === 'availability' : (tagFilter.type === 'dev' || tagFilter.type === 'version' || tagFilter.type === 'category');
         if (!ok) tagFilter = null;
       }
       syncLegendActive();
@@ -837,8 +835,8 @@
       return (node.dev && node.dev.status) || 'planned';
     }
 
-    function nodeLive(node) {
-      return (node.live && node.live.status) || 'planned';
+    function nodeAvailability(node) {
+      return (node.availability && node.availability.status) || 'planned';
     }
 
     function nodeVersion(node) {
@@ -854,14 +852,14 @@
       if (tagFilter.type === 'dev') return nodeDev(node) === tagFilter.value;
       if (tagFilter.type === 'version') return nodeVersion(node) === tagFilter.value;
       if (tagFilter.type === 'category') return nodeCategory(node) === tagFilter.value;
-      return nodeLive(node) === tagFilter.value;
+      return nodeAvailability(node) === tagFilter.value;
     }
 
     function filterValue(el) {
       if (el.dataset.filterType === 'dev') return el.dataset.dev;
       if (el.dataset.filterType === 'version') return el.dataset.version;
       if (el.dataset.filterType === 'category') return el.dataset.category;
-      return el.dataset.live;
+      return el.dataset.availability;
     }
 
     function syncLegendActive() {
@@ -924,13 +922,13 @@
     });
 
     function metaBits(node) {
-      const live = (node.live && node.live.status) || 'planned';
+      const live = (node.availability && node.availability.status) || 'planned';
       const dev = (node.dev && node.dev.status) || 'planned';
       const version = (node.dev && node.dev.version) || '';
       const category = (node.dev && node.dev.category) || '';
       return `
         <div class="row-meta">
-          <span class="live-pill" data-live="${live}"><span class="live-dot" data-live="${live}"></span>${LIVE_LABEL[live] || live}</span>
+          <span class="availability-pill" data-availability="${live}"><span class="availability-dot" data-availability="${live}"></span>${LIVE_LABEL[live] || live}</span>
           <span class="dev-pill" data-dev="${dev}">${DEV_LABEL[dev] || dev}</span>
           ${category ? `<span class="system-tag">${category}</span>` : ''}
           ${version ? `<span class="version-pill">${version}</span>` : ''}
@@ -1062,27 +1060,13 @@
     }
 
     function loadSitemap() {
-      if (window.__SITEMAP__) {
-        render(window.__SITEMAP__);
-        return;
-      }
-
       fetch('sitemap.json')
         .then((res) => {
           if (!res.ok) throw new Error(res.statusText || String(res.status));
           return res.json();
         })
         .then(render)
-        .catch(() => {
-          const script = document.createElement('script');
-          script.src = 'sitemap.js';
-          script.onload = () => {
-            if (window.__SITEMAP__) render(window.__SITEMAP__);
-            else showMapError(new Error('sitemap.js loaded without data'));
-          };
-          script.onerror = () => showMapError(new Error('sitemap.json / sitemap.js not found'));
-          document.head.appendChild(script);
-        });
+        .catch(showMapError);
     }
 
     loadSitemap();
