@@ -19,7 +19,6 @@
       --image-slot: 156px;
       --compact-gap: 18px;
       --tool-collapse: 138px;
-      --toggle-h: 48px;
       --scroll-cancel: 0px;
       --chrome-expanded: 420px;
       --page-bg: #000000;
@@ -77,12 +76,11 @@
       z-index: 30;
       width: 100%;
       padding: 10px 16px 12px;
-      background-color: var(--page-bg);
     }
 
     .page-flow {
       width: 100%;
-      padding-top: calc(var(--chrome-expanded) - var(--hero-compact) * var(--tool-collapse));
+      padding-top: var(--chrome-expanded);
     }
 
     .divider {
@@ -238,10 +236,7 @@
     }
 
     @media (max-width: 700px) {
-      .dev-image-mini {
-        display: none !important;
-        opacity: 0 !important;
-      }
+      .dev-image-mini { display: none; }
     }
 
     .hero {
@@ -263,8 +258,7 @@
       margin: 0 0 0 -80px;
       z-index: 1;
       pointer-events: none;
-      opacity: 1;
-      clip-path: inset(0 0 max(0px, calc(100% - (var(--image-slot) - var(--hero-compact) * var(--tool-collapse) + var(--toggle-h) - var(--image-y)))) 0);
+      opacity: calc(1 - min(1, var(--hero-compact) / 0.35));
     }
 
     .view-toggle-wrap {
@@ -300,13 +294,6 @@
       background: rgba(255, 255, 255, 0.06);
       border-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    @media (max-width: 700px) {
-      body.is-scrolling .mode-toggle {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-      }
     }
 
     body.light .mode-toggle {
@@ -1094,49 +1081,70 @@
       return Number.isFinite(n) ? n : 160;
     }
 
+    function syncMemojiClip() {
+      const img = document.querySelector('.dev-image');
+      const toggle = document.getElementById('modeToggle');
+      if (!img || !toggle) return;
+      const ir = img.getBoundingClientRect();
+      const cut = toggle.getBoundingClientRect().bottom;
+      const fade = 28;
+      if (cut >= ir.bottom - 0.5) {
+        img.style.opacity = '1';
+        img.style.webkitMaskImage = 'none';
+        img.style.maskImage = 'none';
+        return;
+      }
+      if (cut <= ir.top + 0.5) {
+        img.style.opacity = '0';
+        img.style.webkitMaskImage = 'none';
+        img.style.maskImage = 'none';
+        return;
+      }
+      img.style.opacity = '1';
+      const solid = Math.max(0, cut - ir.top - fade);
+      const end = Math.max(0, cut - ir.top);
+      const mask = 'linear-gradient(to bottom, #000 0, #000 ' + solid + 'px, transparent ' + end + 'px, transparent 100%)';
+      img.style.webkitMaskImage = mask;
+      img.style.maskImage = mask;
+    }
+
     const mapHeader = document.getElementById('mapHeader');
     let lastCompact = -1;
-    let scrollRaf = 0;
-    let scrollIdle = 0;
 
     function measureChrome() {
       if (!mapHeader) return;
-      const compact = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hero-compact')) || 0;
-      const collapse = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--tool-collapse')) || 138;
-      const expanded = mapHeader.getBoundingClientRect().height + compact * collapse + 24;
-      document.documentElement.style.setProperty('--chrome-expanded', Math.max(320, Math.ceil(expanded)) + 'px');
+      const h = mapHeader.getBoundingClientRect().height + 20;
+      document.documentElement.style.setProperty('--chrome-expanded', Math.max(280, Math.ceil(h)) + 'px');
     }
 
     function syncHeroCompact() {
       const range = Math.max(1, compactRangePx());
-      const y = window.scrollY || 0;
+      const y = window.scrollY;
       const t = Math.min(1, Math.max(0, y / range));
-      const rounded = t.toFixed(2);
+      const rounded = t.toFixed(4);
+      const cancel = Math.min(y, range);
+      document.documentElement.style.setProperty('--scroll-cancel', cancel + 'px');
       if (rounded !== lastCompact) {
         lastCompact = rounded;
         document.documentElement.style.setProperty('--hero-compact', rounded);
+        syncMemojiClip();
       }
     }
 
     window.addEventListener('scroll', () => {
-      if (window.innerWidth <= 700) {
-        body.classList.add('is-scrolling');
-        clearTimeout(scrollIdle);
-        scrollIdle = setTimeout(() => body.classList.remove('is-scrolling'), 140);
-      }
-      if (scrollRaf) return;
-      scrollRaf = requestAnimationFrame(() => {
-        scrollRaf = 0;
-        syncHeroCompact();
-      });
+      requestAnimationFrame(syncHeroCompact);
     }, { passive: true });
     window.addEventListener('resize', () => {
       measureChrome();
+      syncMemojiClip();
       syncSlider();
     });
     measureChrome();
     syncHeroCompact();
     requestAnimationFrame(syncSlider);
+    if (window.ResizeObserver && mapHeader) {
+      new ResizeObserver(() => measureChrome()).observe(mapHeader);
+    }
     const heroImg = document.querySelector('.dev-image');
     if (heroImg && !heroImg.complete) {
       heroImg.addEventListener('load', measureChrome, { once: true });
