@@ -83,7 +83,7 @@
 
     .page-flow {
       width: 100%;
-      padding-top: calc(var(--chrome-expanded) - var(--hero-compact) * var(--tool-collapse));
+      padding-top: var(--chrome-expanded);
     }
 
     .divider {
@@ -277,7 +277,9 @@
       position: relative;
       z-index: 4;
       width: 100%;
-      padding-top: calc(var(--image-slot) - (var(--hero-compact) * var(--tool-collapse)));
+      padding-top: var(--image-slot);
+      transform: translate3d(0, calc(var(--hero-compact) * var(--tool-collapse) * -1), 0);
+      will-change: transform;
     }
 
     .mode-toggle {
