@@ -77,11 +77,13 @@
       z-index: 30;
       width: 100%;
       padding: 10px 16px 12px;
+      background-color: var(--page-bg);
+      overflow: hidden;
     }
 
     .page-flow {
       width: 100%;
-      padding-top: var(--chrome-expanded);
+      padding-top: calc(var(--chrome-expanded) - var(--hero-compact) * var(--tool-collapse));
     }
 
     .divider {
@@ -1092,19 +1094,20 @@
 
     function measureChrome() {
       if (!mapHeader) return;
-      const h = mapHeader.getBoundingClientRect().height + 20;
-      document.documentElement.style.setProperty('--chrome-expanded', Math.max(280, Math.ceil(h)) + 'px');
+      const compact = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hero-compact')) || 0;
+      const collapse = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--tool-collapse')) || 138;
+      const expanded = mapHeader.getBoundingClientRect().height + compact * collapse + 24;
+      document.documentElement.style.setProperty('--chrome-expanded', Math.max(320, Math.ceil(expanded)) + 'px');
     }
 
     function syncHeroCompact() {
       const range = Math.max(1, compactRangePx());
       const y = window.scrollY || 0;
       const t = Math.min(1, Math.max(0, y / range));
-      const rounded = t.toFixed(3);
+      const rounded = t.toFixed(2);
       if (rounded !== lastCompact) {
         lastCompact = rounded;
         document.documentElement.style.setProperty('--hero-compact', rounded);
-        if (t === 0 || t === 1) measureChrome();
       }
     }
 
