@@ -251,35 +251,17 @@
       margin-top: 0;
     }
 
-    .dev-image-slot {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 160px;
-      height: calc(var(--image-slot) - (var(--hero-compact) * var(--tool-collapse)));
-      margin: 0 0 0 -80px;
-      overflow: hidden;
-      z-index: 1;
-      pointer-events: none;
-    }
-
     .dev-image {
       position: absolute;
-      left: 0;
+      left: 50%;
       top: var(--image-y);
       width: 160px;
       max-width: 160px;
       height: auto;
-      margin: 0;
+      margin: 0 0 0 -80px;
       z-index: 1;
       pointer-events: none;
       opacity: calc(1 - min(1, var(--hero-compact) / 0.35));
-    }
-
-    @media (max-width: 700px) {
-      .dev-image {
-        opacity: 1;
-      }
     }
 
     .view-toggle-wrap {
@@ -794,9 +776,7 @@
         </div>
       </div>
       <div class="hero">
-        <div class="dev-image-slot">
-          <img src="../resources/images/profile/developer_emoji.png" alt="Software Developer" class="dev-image" draggable="false" data-fallback-src="https://raw.githubusercontent.com/briancrink/resources.briancrink.com/main/images/profile/developer_emoji.png" onerror="if(!this.dataset.fell && this.dataset.fallbackSrc){this.dataset.fell='1';this.src=this.dataset.fallbackSrc;}">
-        </div>
+        <img src="../resources/images/profile/developer_emoji.png" alt="Software Developer" class="dev-image" draggable="false" data-fallback-src="https://raw.githubusercontent.com/briancrink/resources.briancrink.com/main/images/profile/developer_emoji.png" onerror="if(!this.dataset.fell && this.dataset.fallbackSrc){this.dataset.fell='1';this.src=this.dataset.fallbackSrc;}">
         <div class="view-toggle-wrap">
           <div class="mode-toggle map" id="modeToggle" role="tablist" aria-label="Map view">
             <div class="toggle-slider" id="toggleSlider"></div>
