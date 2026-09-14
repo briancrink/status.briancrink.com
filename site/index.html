@@ -78,12 +78,11 @@
       width: 100%;
       padding: 10px 16px 12px;
       background-color: var(--page-bg);
-      overflow: hidden;
     }
 
     .page-flow {
       width: 100%;
-      padding-top: var(--chrome-expanded);
+      padding-top: calc(var(--chrome-expanded) - var(--hero-compact) * var(--tool-collapse));
     }
 
     .divider {
@@ -277,9 +276,7 @@
       position: relative;
       z-index: 4;
       width: 100%;
-      padding-top: var(--image-slot);
-      transform: translate3d(0, calc(var(--hero-compact) * var(--tool-collapse) * -1), 0);
-      will-change: transform;
+      padding-top: calc(var(--image-slot) - (var(--hero-compact) * var(--tool-collapse)));
     }
 
     .mode-toggle {
@@ -303,6 +300,13 @@
       background: rgba(255, 255, 255, 0.06);
       border-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 700px) {
+      body.is-scrolling .mode-toggle {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
     }
 
     body.light .mode-toggle {
@@ -1093,6 +1097,7 @@
     const mapHeader = document.getElementById('mapHeader');
     let lastCompact = -1;
     let scrollRaf = 0;
+    let scrollIdle = 0;
 
     function measureChrome() {
       if (!mapHeader) return;
@@ -1114,6 +1119,11 @@
     }
 
     window.addEventListener('scroll', () => {
+      if (window.innerWidth <= 700) {
+        body.classList.add('is-scrolling');
+        clearTimeout(scrollIdle);
+        scrollIdle = setTimeout(() => body.classList.remove('is-scrolling'), 140);
+      }
       if (scrollRaf) return;
       scrollRaf = requestAnimationFrame(() => {
         scrollRaf = 0;
