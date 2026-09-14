@@ -19,6 +19,7 @@
       --image-slot: 156px;
       --compact-gap: 18px;
       --tool-collapse: 138px;
+      --toggle-h: 48px;
       --scroll-cancel: 0px;
       --chrome-expanded: 420px;
       --page-bg: #000000;
@@ -261,7 +262,8 @@
       margin: 0 0 0 -80px;
       z-index: 1;
       pointer-events: none;
-      opacity: calc(1 - min(1, var(--hero-compact) / 0.35));
+      opacity: 1;
+      clip-path: inset(0 0 max(0px, calc(100% - (var(--image-slot) - var(--hero-compact) * var(--tool-collapse) + var(--toggle-h) - var(--image-y)))) 0);
     }
 
     .view-toggle-wrap {
@@ -1084,36 +1086,6 @@
       return Number.isFinite(n) ? n : 160;
     }
 
-    const finePointer = window.matchMedia('(min-width: 701px) and (pointer: fine)');
-
-    function syncMemojiClip() {
-      if (!finePointer.matches) return;
-      const img = document.querySelector('.dev-image');
-      const toggle = document.getElementById('modeToggle');
-      if (!img || !toggle) return;
-      const ir = img.getBoundingClientRect();
-      const cut = toggle.getBoundingClientRect().bottom;
-      const fade = 28;
-      if (cut >= ir.bottom - 0.5) {
-        img.style.opacity = '1';
-        img.style.webkitMaskImage = 'none';
-        img.style.maskImage = 'none';
-        return;
-      }
-      if (cut <= ir.top + 0.5) {
-        img.style.opacity = '0';
-        img.style.webkitMaskImage = 'none';
-        img.style.maskImage = 'none';
-        return;
-      }
-      img.style.opacity = '1';
-      const solid = Math.max(0, cut - ir.top - fade);
-      const end = Math.max(0, cut - ir.top);
-      const mask = 'linear-gradient(to bottom, #000 0, #000 ' + solid + 'px, transparent ' + end + 'px, transparent 100%)';
-      img.style.webkitMaskImage = mask;
-      img.style.maskImage = mask;
-    }
-
     const mapHeader = document.getElementById('mapHeader');
     let lastCompact = -1;
     let scrollRaf = 0;
@@ -1132,8 +1104,7 @@
       if (rounded !== lastCompact) {
         lastCompact = rounded;
         document.documentElement.style.setProperty('--hero-compact', rounded);
-        if (finePointer.matches) syncMemojiClip();
-        if (t === 0 || t === 1 || finePointer.matches) measureChrome();
+        if (t === 0 || t === 1) measureChrome();
       }
     }
 
@@ -1146,15 +1117,11 @@
     }, { passive: true });
     window.addEventListener('resize', () => {
       measureChrome();
-      syncMemojiClip();
       syncSlider();
     });
     measureChrome();
     syncHeroCompact();
     requestAnimationFrame(syncSlider);
-    if (window.ResizeObserver && mapHeader) {
-      new ResizeObserver(() => measureChrome()).observe(mapHeader);
-    }
     const heroImg = document.querySelector('.dev-image');
     if (heroImg && !heroImg.complete) {
       heroImg.addEventListener('load', measureChrome, { once: true });
