@@ -184,9 +184,40 @@
       pointer-events: none;
     }
 
+    .version-pill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(115deg, transparent 45%, rgba(255, 255, 255, 0.55) 50%, transparent 55%);
+      background-repeat: no-repeat;
+      background-size: 200% 100%;
+      background-position: -50% 0;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      animation: versionPillShine 2.6s linear infinite;
+      animation-play-state: paused;
+      pointer-events: none;
+    }
+
+    body.light .version-pill::after {
+      background-image: linear-gradient(115deg, transparent 45%, rgba(0, 0, 0, 0.18) 50%, transparent 55%);
+    }
+
+    .version-pill:hover::after {
+      opacity: 1;
+      animation-play-state: running;
+    }
+
+    @keyframes versionPillShine {
+      0%   { background-position: -50% 0; }
+      100% { background-position: 150% 0; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .site-nav-link.portal { animation: none; }
       .version-pill::before { animation: none; }
+      .version-pill::after { animation: none; }
     }
 
     .site-nav {
@@ -641,12 +672,12 @@
 
     .version-pill {
       background: #32343871;
-      color: #fbfbfbcf;
+      color: #ffffff;
     }
 
     .legend .version-pill.is-active {
-      background: #a4a4a47a;
-      color: #fbfbfbcf;
+      background: #a4a4a44b;
+      color: #ffffff;
     }
 
     .system-tag {
@@ -751,12 +782,12 @@
 
     body.light .version-pill {
       background: #f1f1f132;
-      color: #77787a;
+      color: #ffffff;
     }
 
     body.light .legend .version-pill.is-active {
       background: #a4a4a453;
-      color: #77787a;
+      color: #ffffff;
     }
 
     body.light .system-tag {
