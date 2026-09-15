@@ -155,8 +155,38 @@
       animation: portalChromaFade 8s linear infinite;
     }
 
+    @property --border-angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    @keyframes versionPillBorderSpin {
+      to { --border-angle: 360deg; }
+    }
+
+    .version-pill {
+      position: relative;
+      --pill-chroma-border: conic-gradient(from var(--border-angle), var(--pc1), var(--pc2), var(--pc3), var(--pc4), var(--pc5), var(--pc1));
+      border: 1px solid transparent;
+    }
+
+    .version-pill::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: var(--pill-chroma-border);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      animation: versionPillBorderSpin 8s linear infinite;
+      pointer-events: none;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .site-nav-link.portal { animation: none; }
+      .version-pill::before { animation: none; }
     }
 
     .site-nav {
@@ -610,15 +640,13 @@
     .availability-dot[data-availability="down"] { background: #ef4444; }
 
     .version-pill {
-      background: #f7e92a28;
-      color: #ffff92;
-      border: 1px solid #fff478bc;
+      background: #32343871;
+      color: #fbfbfbcf;
     }
 
     .legend .version-pill.is-active {
-      background: #f7e92a54;
-      color: #ffff92;
-      border-color: #fff478bc;
+      background: #a4a4a47a;
+      color: #fbfbfbcf;
     }
 
     .system-tag {
@@ -722,15 +750,13 @@
     }
 
     body.light .version-pill {
-      background: #fced1b2c;
-      color: #848400;
-      border: 1px solid #ecda1ddd;
+      background: #f1f1f132;
+      color: #77787a;
     }
 
     body.light .legend .version-pill.is-active {
-      background: #f7e92a90;
-      color: #848400;
-      border-color: #ecda1ddd;
+      background: #a4a4a453;
+      color: #77787a;
     }
 
     body.light .system-tag {
@@ -1183,7 +1209,13 @@
         tab.setAttribute('aria-selected', on ? 'true' : 'false');
       });
       const hash = '#' + next;
-      if (location.hash !== hash) history.replaceState(null, '', hash);
+      if (location.hash !== hash) {
+        try {
+          history.replaceState(null, '', hash);
+        } catch (err) {
+          // Sandboxed embeds (e.g. srcdoc iframes) can disallow history mutation; ignore.
+        }
+      }
       if (tagFilter) {
         const ok = next === 'availability'
           ? tagFilter.type === 'availability'
