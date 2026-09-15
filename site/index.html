@@ -33,9 +33,28 @@
       color: var(--page-fg);
     }
 
-    html, body, .header, .container, .page-flow {
+    html, body {
       background-color: var(--page-bg);
       transition: background-color 0.45s ease, color 0.45s ease;
+    }
+
+    .header, .container, .page-flow {
+      background-color: transparent;
+      transition: color 0.45s ease;
+    }
+
+    #topoCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
     }
 
     body {
@@ -736,6 +755,7 @@
   </style>
 </head>
 <body data-view="map">
+  <canvas id="topoCanvas" aria-hidden="true"></canvas>
   <div class="container">
     <div class="header" id="mapHeader">
       <div class="site-nav">
@@ -845,9 +865,179 @@
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('light');
       setToggleIcon();
+      if (typeof startTopoTheme === 'function') {
+        startTopoTheme(body.classList.contains('light') ? 1 : 0);
+      }
     });
     toggleBtn.addEventListener('mouseenter', setToggleIcon);
     toggleBtn.addEventListener('mouseleave', setToggleIcon);
+
+    const TOPO_THEME_MS = 450;
+    const GRID_ALPHA = 0.6;
+    const RIPPLE_OPACITY = 0.14;
+    let topoTheme = body.classList.contains('light') ? 1 : 0;
+    let topoThemeFrom = topoTheme;
+    let topoThemeTo = topoTheme;
+    let topoThemeStart = 0;
+    let topoAnim = 0;
+
+    function topoStroke(t) {
+      const lift = 0;
+      const g0 = 16 + lift * 140;
+      const a0 = Math.min(0.9, 0.72 + lift);
+      const g1 = 30 + lift * 40;
+      const a1 = Math.min(0.18, 0.10 + lift * 0.08);
+      const u = t < 0 ? 0 : t > 1 ? 1 : t;
+      const g = Math.round(g0 + (g1 - g0) * u);
+      const a = a0 + (a1 - a0) * u;
+      return 'rgba(' + g + ',' + g + ',' + g + ',' + a.toFixed(3) + ')';
+    }
+
+    const topoCanvas = document.getElementById('topoCanvas');
+    const topoCtx = topoCanvas && topoCanvas.getContext('2d');
+    let topoW = 0;
+    let topoH = 0;
+    let topoPath = null;
+
+    function hash2(ix, iy) {
+      let n = (ix * 374761393 + iy * 668265263) | 0;
+      n = (n ^ (n >>> 13)) * 1274126177;
+      return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+    }
+
+    function noise2(x, y) {
+      const x0 = Math.floor(x);
+      const y0 = Math.floor(y);
+      const fx = x - x0;
+      const fy = y - y0;
+      const sx = fx * fx * (3 - 2 * fx);
+      const sy = fy * fy * (3 - 2 * fy);
+      const v00 = hash2(x0, y0);
+      const v10 = hash2(x0 + 1, y0);
+      const v01 = hash2(x0, y0 + 1);
+      const v11 = hash2(x0 + 1, y0 + 1);
+      return v00 * (1 - sx) * (1 - sy) + v10 * sx * (1 - sy) + v01 * (1 - sx) * sy + v11 * sx * sy;
+    }
+
+    function heightAt(x, y) {
+      const wx = noise2(x * 0.004 + 21, y * 0.004 + 7) * 18;
+      const wy = noise2(x * 0.004 + 3, y * 0.004 + 41) * 18;
+      const nx = (x + wx) * 0.016;
+      const ny = (y + wy) * 0.016;
+      let h = noise2(nx, ny) * 0.42
+        + noise2(nx * 2.2 + 8, ny * 2.2) * 0.26
+        + noise2(nx * 4.4 + 19, ny * 4.4) * 0.16
+        + noise2(nx * 8.1 + 33, ny * 8.1) * 0.10
+        + noise2(x * 0.007 + 50, y * 0.007) * 0.06;
+      return h;
+    }
+
+    function buildTopoPath() {
+      if (!topoCtx) return;
+      const cell = 14;
+      const cols = Math.ceil(topoW / cell);
+      const rows = Math.ceil(topoH / cell);
+      const field = new Float32Array((cols + 1) * (rows + 1));
+      const stride = cols + 1;
+      for (let r = 0; r <= rows; r++) {
+        for (let c = 0; c <= cols; c++) {
+          field[r * stride + c] = heightAt(c * cell, r * cell);
+        }
+      }
+      const levels = [];
+      for (let v = 0.22; v <= 0.82; v += 0.06) levels.push(v);
+      const path = new Path2D();
+      function interp(a, b, level) {
+        const d = b - a;
+        if (Math.abs(d) < 1e-6) return 0.5;
+        return (level - a) / d;
+      }
+      for (let li = 0; li < levels.length; li++) {
+        const level = levels[li];
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const v0 = field[r * stride + c];
+            const v1 = field[r * stride + c + 1];
+            const v2 = field[(r + 1) * stride + c + 1];
+            const v3 = field[(r + 1) * stride + c];
+            let code = 0;
+            if (v0 >= level) code |= 1;
+            if (v1 >= level) code |= 2;
+            if (v2 >= level) code |= 4;
+            if (v3 >= level) code |= 8;
+            if (code === 0 || code === 15) continue;
+            const pts = [];
+            if ((code & 1) !== (code & 2) >> 1) pts.push([c + interp(v0, v1, level), r]);
+            if ((code & 2) !== (code & 4) >> 1) pts.push([c + 1, r + interp(v1, v2, level)]);
+            if ((code & 4) !== (code & 8) >> 1) pts.push([c + interp(v3, v2, level), r + 1]);
+            if ((code & 8) !== (code & 1)) pts.push([c, r + interp(v0, v3, level)]);
+            if (pts.length >= 2) {
+              path.moveTo(pts[0][0] * cell, pts[0][1] * cell);
+              path.lineTo(pts[1][0] * cell, pts[1][1] * cell);
+              if (pts.length === 4) {
+                path.moveTo(pts[2][0] * cell, pts[2][1] * cell);
+                path.lineTo(pts[3][0] * cell, pts[3][1] * cell);
+              }
+            }
+          }
+        }
+      }
+      topoPath = path;
+    }
+
+    function paintTopo() {
+      if (!topoCtx || !topoPath) return;
+      topoCtx.clearRect(0, 0, topoW, topoH);
+      topoCtx.lineWidth = 1;
+      topoCtx.lineJoin = 'round';
+      topoCtx.strokeStyle = topoStroke(topoTheme);
+      topoCtx.stroke(topoPath);
+    }
+
+    function resizeTopo() {
+      if (!topoCanvas || !topoCtx) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      topoW = window.innerWidth;
+      topoH = Math.max(window.innerHeight, document.documentElement.scrollHeight);
+      topoCanvas.width = Math.floor(topoW * dpr);
+      topoCanvas.height = Math.floor(topoH * dpr);
+      topoCanvas.style.width = topoW + 'px';
+      topoCanvas.style.height = topoH + 'px';
+      topoCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      buildTopoPath();
+      paintTopo();
+    }
+
+    function tickTopoTheme(now) {
+      if (!topoThemeStart) return;
+      const raw = Math.min(1, (now - topoThemeStart) / TOPO_THEME_MS);
+      const goingLight = topoThemeTo > topoThemeFrom;
+      const p = goingLight ? (1 - Math.pow(1 - raw, 3)) : Math.pow(raw, 3);
+      topoTheme = topoThemeFrom + (topoThemeTo - topoThemeFrom) * p;
+      paintTopo();
+      if (raw >= 1) {
+        topoThemeStart = 0;
+        if (topoAnim) {
+          cancelAnimationFrame(topoAnim);
+          topoAnim = 0;
+        }
+        return;
+      }
+      topoAnim = requestAnimationFrame(tickTopoTheme);
+    }
+
+    function startTopoTheme(to) {
+      topoThemeFrom = to > topoTheme ? Math.max(topoTheme, 0.7) : topoTheme;
+      topoThemeTo = to;
+      topoTheme = topoThemeFrom;
+      topoThemeStart = performance.now();
+      paintTopo();
+      if (topoAnim) cancelAnimationFrame(topoAnim);
+      topoAnim = requestAnimationFrame(tickTopoTheme);
+    }
+
+    resizeTopo();
+    window.addEventListener('resize', resizeTopo);
 
     const DEV_LABEL = {
       planned: 'Planned',
@@ -1074,6 +1264,7 @@
         root.appendChild(col);
       });
       requestAnimationFrame(measureChrome);
+      requestAnimationFrame(resizeTopo);
     }
 
     function compactRangePx() {
