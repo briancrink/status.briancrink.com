@@ -27,7 +27,7 @@
 
     html, body {
       min-height: 100%;
-      min-height: 50dvh;
+      min-height: 100dvh;
       overflow-x: hidden;
       background-color: var(--page-bg);
       color: var(--page-fg);
@@ -46,7 +46,8 @@
       padding: 0;
     }
 
-    body.light {
+    body.light,
+    html:has(body.light) {
       --page-bg: #ffffff;
       --page-fg: #1a1a1a;
     }
@@ -259,7 +260,6 @@
       z-index: 1;
       pointer-events: none;
       opacity: calc(1 - min(1, var(--hero-compact) / 0.35));
-      will-change: opacity, mask-image, -webkit-mask-image;
     }
 
     .view-toggle-wrap {
@@ -885,17 +885,7 @@
         tab.setAttribute('aria-selected', on ? 'true' : 'false');
       });
       const hash = '#' + next;
-      if (location.hash !== hash) {
-        try {
-          history.replaceState(null, '', hash);
-        } catch (err) {
-          // history.replaceState can throw a SecurityError in sandboxed
-          // contexts (e.g. a srcdoc iframe preview) where the document has
-          // no real URL to update. Safe to ignore — hash-based deep
-          // linking just won't be available there, but the rest of
-          // setView() below (legend sync, render, slider) must still run.
-        }
-      }
+      if (location.hash !== hash) history.replaceState(null, '', hash);
       if (tagFilter) {
         const ok = next === 'availability'
           ? tagFilter.type === 'availability'
@@ -1092,69 +1082,28 @@
       return Number.isFinite(n) ? n : 160;
     }
 
-    // --- Hero clip geometry cache -------------------------------------
-    // The toggle's vertical position only ever moves because
-    // .view-toggle-wrap's padding-top shrinks by (--hero-compact * --tool-collapse)
-    // px, and the dev-image's own top offset never changes with scroll (only
-    // its opacity/mask do). Both of those facts mean the "cut" line used for
-    // the fade mask is a deterministic linear function of --hero-compact.
-    // We measure the real DOM geometry once (on load/resize) and then derive
-    // the cut point per scroll frame with plain arithmetic, so the hot
-    // scroll path never has to call getBoundingClientRect(). Calling it
-    // every frame right after writing --hero-compact was forcing a
-    // synchronous layout (layout thrashing) each frame, which is cheap
-    // enough to hide on desktop but blows the ~8ms frame budget on a 120Hz
-    // iPhone display, causing the choppy scroll.
-    let toolCollapsePx = 138;
-    let devImgTop = null;
-    let devImgBottom = null;
-    let toggleRestBottom = null; // toggle's viewport-bottom at --hero-compact = 0
-
-    function refreshToolCollapsePx() {
-      const raw = getComputedStyle(document.documentElement).getPropertyValue('--tool-collapse').trim();
-      const n = parseFloat(raw);
-      toolCollapsePx = Number.isFinite(n) ? n : 138;
-    }
-
-    function measureClipGeometry() {
+    function syncMemojiClip() {
       const img = document.querySelector('.dev-image');
       const toggle = document.getElementById('modeToggle');
       if (!img || !toggle) return;
-      refreshToolCollapsePx();
       const ir = img.getBoundingClientRect();
-      devImgTop = ir.top;
-      devImgBottom = ir.bottom;
-      const tr = toggle.getBoundingClientRect();
-      // Back out the t=0 resting position from whatever --hero-compact is
-      // right now, so this can be safely re-measured at any scroll offset
-      // (e.g. on resize) without needing to jump the page back to the top.
-      toggleRestBottom = tr.bottom + heroCompactValue * toolCollapsePx;
-    }
-
-    function syncMemojiClip() {
-      const img = document.querySelector('.dev-image');
-      if (!img) return;
-      if (devImgTop === null || toggleRestBottom === null) {
-        measureClipGeometry();
-        if (devImgTop === null || toggleRestBottom === null) return;
-      }
-      const cut = toggleRestBottom - heroCompactValue * toolCollapsePx;
+      const cut = toggle.getBoundingClientRect().bottom;
       const fade = 28;
-      if (cut >= devImgBottom - 0.5) {
+      if (cut >= ir.bottom - 0.5) {
         img.style.opacity = '1';
         img.style.webkitMaskImage = 'none';
         img.style.maskImage = 'none';
         return;
       }
-      if (cut <= devImgTop + 0.5) {
+      if (cut <= ir.top + 0.5) {
         img.style.opacity = '0';
         img.style.webkitMaskImage = 'none';
         img.style.maskImage = 'none';
         return;
       }
       img.style.opacity = '1';
-      const solid = Math.max(0, cut - devImgTop - fade);
-      const end = Math.max(0, cut - devImgTop);
+      const solid = Math.max(0, cut - ir.top - fade);
+      const end = Math.max(0, cut - ir.top);
       const mask = 'linear-gradient(to bottom, #000 0, #000 ' + solid + 'px, transparent ' + end + 'px, transparent 100%)';
       img.style.webkitMaskImage = mask;
       img.style.maskImage = mask;
@@ -1162,7 +1111,6 @@
 
     const mapHeader = document.getElementById('mapHeader');
     let lastCompact = -1;
-    let heroCompactValue = 0;
 
     function measureChrome() {
       if (!mapHeader) return;
@@ -1179,47 +1127,28 @@
       document.documentElement.style.setProperty('--scroll-cancel', cancel + 'px');
       if (rounded !== lastCompact) {
         lastCompact = rounded;
-        heroCompactValue = t;
         document.documentElement.style.setProperty('--hero-compact', rounded);
         syncMemojiClip();
       }
     }
 
-    // Coalesce scroll events into at most one update per animation frame.
-    // Safari on iOS can fire many 'scroll' events per frame during momentum
-    // scrolling; without this guard, each one queued its own rAF callback,
-    // so several full (layout-forcing) updates could run inside a single
-    // frame instead of just one — the main cause of the choppiness on mobile.
-    let scrollRafPending = false;
     window.addEventListener('scroll', () => {
-      if (scrollRafPending) return;
-      scrollRafPending = true;
-      requestAnimationFrame(() => {
-        scrollRafPending = false;
-        syncHeroCompact();
-      });
+      requestAnimationFrame(syncHeroCompact);
     }, { passive: true });
     window.addEventListener('resize', () => {
       measureChrome();
-      measureClipGeometry();
       syncMemojiClip();
       syncSlider();
     });
     measureChrome();
     syncHeroCompact();
-    measureClipGeometry();
-    syncMemojiClip();
     requestAnimationFrame(syncSlider);
     if (window.ResizeObserver && mapHeader) {
       new ResizeObserver(() => measureChrome()).observe(mapHeader);
     }
     const heroImg = document.querySelector('.dev-image');
     if (heroImg && !heroImg.complete) {
-      heroImg.addEventListener('load', () => {
-        measureChrome();
-        measureClipGeometry();
-        syncMemojiClip();
-      }, { once: true });
+      heroImg.addEventListener('load', measureChrome, { once: true });
     }
 
     function showMapError(err) {
