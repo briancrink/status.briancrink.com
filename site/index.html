@@ -26,9 +26,9 @@
     }
 
     html, body {
-      min-height: 100%;
-      min-height: 100dvh;
-      overflow-x: hidden;
+      height: 100%;
+      max-height: 100%;
+      overflow: hidden;
       background-color: var(--page-bg);
       color: var(--page-fg);
     }
@@ -38,7 +38,7 @@
       transition: background-color 0.45s ease, color 0.45s ease;
     }
 
-    .header, .container, .page-flow {
+    .container, .page-flow {
       background-color: transparent;
       transition: color 0.45s ease;
     }
@@ -96,11 +96,26 @@
       z-index: 30;
       width: 100%;
       padding: 10px 16px 12px;
+      background-color: transparent;
     }
 
     .page-flow {
       width: 100%;
-      padding-top: var(--chrome-expanded);
+      padding-top: 12px;
+      padding-bottom: 48px;
+    }
+
+    #scroller {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--chrome-expanded);
+      bottom: 0;
+      z-index: 1;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior-y: none;
+      -webkit-overflow-scrolling: touch;
     }
 
     .divider {
@@ -843,8 +858,10 @@
       <hr class="divider">
     </div>
 
-    <div class="page-flow" id="pageFlow">
-      <div class="links" id="sitemap-links"></div>
+    <div id="scroller">
+      <div class="page-flow" id="pageFlow">
+        <div class="links" id="sitemap-links"></div>
+      </div>
     </div>
 
     <button class="theme-toggle" id="theme-toggle" type="button" tabindex="-1">
@@ -1305,13 +1322,21 @@
 
     function measureChrome() {
       if (!mapHeader) return;
-      const h = mapHeader.getBoundingClientRect().height + 20;
-      document.documentElement.style.setProperty('--chrome-expanded', Math.max(280, Math.ceil(h)) + 'px');
+      const divider = mapHeader.querySelector('.divider');
+      const edge = divider || mapHeader;
+      const h = Math.ceil(edge.getBoundingClientRect().bottom);
+      document.documentElement.style.setProperty('--chrome-expanded', Math.max(0, h) + 'px');
+    }
+
+    const scroller = document.getElementById('scroller');
+
+    function scrollYNow() {
+      return scroller ? scroller.scrollTop : window.scrollY;
     }
 
     function syncHeroCompact() {
       const range = Math.max(1, compactRangePx());
-      const y = window.scrollY;
+      const y = scrollYNow();
       const t = Math.min(1, Math.max(0, y / range));
       const rounded = t.toFixed(4);
       const cancel = Math.min(y, range);
@@ -1320,12 +1345,20 @@
         lastCompact = rounded;
         document.documentElement.style.setProperty('--hero-compact', rounded);
         syncMemojiClip();
+        measureChrome();
       }
     }
 
-    window.addEventListener('scroll', () => {
-      requestAnimationFrame(syncHeroCompact);
-    }, { passive: true });
+    if (scroller) {
+      scroller.addEventListener('scroll', () => {
+        requestAnimationFrame(syncHeroCompact);
+      }, { passive: true });
+    }
+    if (mapHeader && scroller) {
+      mapHeader.addEventListener('wheel', (e) => {
+        scroller.scrollTop += e.deltaY;
+      }, { passive: true });
+    }
     window.addEventListener('resize', () => {
       measureChrome();
       syncMemojiClip();
