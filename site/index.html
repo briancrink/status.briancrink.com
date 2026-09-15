@@ -778,52 +778,53 @@
     }
 
     body.light .availability-pill[data-availability="unlisted"] {
-      color: #4b5563;
+      background: #bababa3e;
+      color: #6d6d6d;
     }
 
-    body.light .legend .availability-pill.is-active[data-dev="unlisted"] {
+    body.light .legend .availability-pill.is-active[data-availability="unlisted"] {
       background: #bababa7f;
-      color: #e7e7e7ee;
+      color: #6d6d6d;
     }
 
-    body.light .legend .availability-pill[data-dev="preview"] {
+    body.light .legend .availability-pill[data-availability="preview"] {
+      background: #ff68f51f;
+      color: #c522c0;
+    }
+
+    body.light .legend .availability-pill.is-active[data-availability="preview"] {
       background: #ff68f56a;
-      color: #ffb7fee3;
+      color: #c522c0;
     }
 
-    body.light .legend .availability-pill.is-active[data-dev="preview"] {
-      background: #ff68f56a;
-      color: #ffb7fee3;
+    body.light .legend .availability-pill[data-availability="live"] {
+      background: #61ff9b31;
+      color: #22c55e;
     }
 
-    body.light .legend .availability-pill[data-dev="live"] {
+    body.light .legend .availability-pill.is-active[data-availability="live"] {
       background: #61ff9b71;
-      color: #c0ffd9e6;
+      color: #22c55e;
     }
 
-    body.light .legend .availability-pill.is-active[data-dev="live"] {
-      background: #61ff9b71;
-      color: #c0ffd9e6;
+    body.light .legend .availability-pill[data-availability="maintenance"] {
+      background: #ffcf553e;
+      color: #f59e0b;
     }
 
-    body.light .legend .availability-pill[data-dev="maintenance"] {
+    body.light .legend .availability-pill.is-active[data-availability="maintenance"] {
       background: #ffcf557f;
-      color: #ffce78ed;
+      color: #f59e0b;
     }
 
-    body.light .legend .availability-pill.is-active[data-dev="maintenance"] {
-      background: #ffcf557f;
-      color: #ffce78ed;
+    body.light .legend .availability-pill[data-availability="down"] {
+      background: #ff60602a;
+      color: #ef4444;
     }
 
-    body.light .legend .availability-pill[data-dev="down"] {
+    body.light .legend .availability-pill.is-active[data-availability="down"] {
       background: #ff60608f;
-      color: #ffa7a7;
-    }
-
-    body.light .legend .availability-pill.is-active[data-dev="down"] {
-      background: #ff60608f;
-      color: #ffa7a7;
+      color: #ef4444;
     }
 
     body[data-view="development"] .links .availability-pill { display: none; }
