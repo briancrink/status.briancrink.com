@@ -38,7 +38,7 @@
           "path": "/academia",
           "url": "https://briancrink.com/academia",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -51,7 +51,7 @@
           "path": "/api",
           "url": "https://briancrink.com/api",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -64,7 +64,7 @@
           "path": "/business",
           "url": "https://briancrink.com/business",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -77,7 +77,7 @@
           "path": "/contact",
           "url": "https://briancrink.com/contact",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -90,7 +90,7 @@
           "path": "/dev",
           "url": "https://briancrink.com/dev",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -116,7 +116,7 @@
           "path": "/event",
           "url": "https://briancrink.com/event",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -129,7 +129,7 @@
           "path": "/home",
           "url": "https://briancrink.com/home",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -142,7 +142,7 @@
           "path": "/feed",
           "url": "https://briancrink.com/feed",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -155,7 +155,7 @@
           "path": "/os",
           "url": "https://briancrink.com/os",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -168,7 +168,7 @@
           "path": "/portal",
           "url": "https://briancrink.com/portal",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -181,7 +181,7 @@
           "path": "/resume",
           "url": "https://briancrink.com/resume",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -194,7 +194,7 @@
           "path": "/shop",
           "url": "https://briancrink.com/shop",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -207,7 +207,7 @@
           "path": "/site",
           "url": "https://briancrink.com/site",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -233,7 +233,7 @@
           "path": "/social",
           "url": "https://briancrink.com/social",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -246,7 +246,7 @@
           "path": "/store",
           "url": "https://briancrink.com/store",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -259,7 +259,7 @@
           "path": "/support",
           "url": "https://briancrink.com/support",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -1027,7 +1027,7 @@
       "url": "https://dev.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "planned",
         "version": "v1.0.0",
         "category": "Development"
       },
@@ -1037,7 +1037,7 @@
           "path": "/apps",
           "url": "https://dev.briancrink.com/apps",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1050,7 +1050,7 @@
           "path": "/architecture",
           "url": "https://dev.briancrink.com/architecture",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1063,7 +1063,7 @@
           "path": "/backlog",
           "url": "https://dev.briancrink.com/backlog",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1076,7 +1076,7 @@
           "path": "/changelog",
           "url": "https://dev.briancrink.com/changelog",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1089,7 +1089,7 @@
           "path": "/contributions",
           "url": "https://dev.briancrink.com/contributions",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1102,7 +1102,7 @@
           "path": "/design",
           "url": "https://dev.briancrink.com/design",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1115,7 +1115,7 @@
           "path": "/docs",
           "url": "https://dev.briancrink.com/docs",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1128,7 +1128,7 @@
           "path": "/dotfiles",
           "url": "https://dev.briancrink.com/dotfiles",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1141,7 +1141,7 @@
           "path": "/github",
           "url": "https://dev.briancrink.com/github",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1154,7 +1154,7 @@
           "path": "/issues",
           "url": "https://dev.briancrink.com/issues",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1167,7 +1167,7 @@
           "path": "/lab",
           "url": "https://dev.briancrink.com/lab",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1180,7 +1180,7 @@
           "path": "/releases",
           "url": "https://dev.briancrink.com/releases",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1193,7 +1193,7 @@
           "path": "/repos",
           "url": "https://dev.briancrink.com/repos",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1206,7 +1206,7 @@
           "path": "/roadmap",
           "url": "https://dev.briancrink.com/roadmap",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1219,7 +1219,7 @@
           "path": "/site",
           "url": "https://dev.briancrink.com/site",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1232,7 +1232,7 @@
           "path": "/status",
           "url": "https://dev.briancrink.com/status",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1245,7 +1245,7 @@
           "path": "/tasks",
           "url": "https://dev.briancrink.com/tasks",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1258,7 +1258,7 @@
           "path": "/updates",
           "url": "https://dev.briancrink.com/updates",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Development"
           },
@@ -1277,7 +1277,7 @@
       "url": "https://feed.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 11a9 9 0 0 1 9 9\"/><path d=\"M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "planned",
         "version": "v1.0.0",
         "category": "Content"
       },
@@ -1287,7 +1287,7 @@
           "path": "/auto",
           "url": "https://feed.briancrink.com/auto",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1300,7 +1300,7 @@
           "path": "/clothing",
           "url": "https://feed.briancrink.com/clothing",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1313,7 +1313,7 @@
           "path": "/culture",
           "url": "https://feed.briancrink.com/culture",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1326,7 +1326,7 @@
           "path": "/design",
           "url": "https://feed.briancrink.com/design",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1339,7 +1339,7 @@
           "path": "/dev",
           "url": "https://feed.briancrink.com/dev",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1352,7 +1352,7 @@
           "path": "/scooter",
           "url": "https://feed.briancrink.com/scooter",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1365,7 +1365,7 @@
           "path": "/entertainment",
           "url": "https://feed.briancrink.com/entertainment",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1378,7 +1378,7 @@
           "path": "/gaming",
           "url": "https://feed.briancrink.com/gaming",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1391,7 +1391,7 @@
           "path": "/design/graphic",
           "url": "https://feed.briancrink.com/design/graphic",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1404,7 +1404,7 @@
           "path": "/design/home",
           "url": "https://feed.briancrink.com/design/home",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1417,7 +1417,7 @@
           "path": "/keyboards",
           "url": "https://feed.briancrink.com/keyboards",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1430,7 +1430,7 @@
           "path": "/music",
           "url": "https://feed.briancrink.com/music",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1443,7 +1443,7 @@
           "path": "/review/music",
           "url": "https://feed.briancrink.com/review/music",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1456,7 +1456,7 @@
           "path": "/politics",
           "url": "https://feed.briancrink.com/politics",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1469,7 +1469,7 @@
           "path": "/productivity",
           "url": "https://feed.briancrink.com/productivity",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1482,7 +1482,7 @@
           "path": "/software",
           "url": "https://feed.briancrink.com/software",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1495,7 +1495,7 @@
           "path": "/sports",
           "url": "https://feed.briancrink.com/sports",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1508,7 +1508,7 @@
           "path": "/tech",
           "url": "https://feed.briancrink.com/tech",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1521,7 +1521,7 @@
           "path": "/review/tv",
           "url": "https://feed.briancrink.com/review/tv",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1534,7 +1534,7 @@
           "path": "/design/web",
           "url": "https://feed.briancrink.com/design/web",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1547,7 +1547,7 @@
           "path": "/woodcraft",
           "url": "https://feed.briancrink.com/woodcraft",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Content"
           },
@@ -1576,7 +1576,7 @@
           "path": "/contact",
           "url": "https://hire.briancrink.com/contact",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Career"
           },
@@ -1615,7 +1615,7 @@
           "path": "/resume",
           "url": "https://hire.briancrink.com/resume",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Career"
           },
@@ -1822,7 +1822,7 @@
       "url": "https://os.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2.3\" y=\"2.3\" width=\"19.4\" height=\"19.4\" rx=\"5.2\"/><path d=\"M12.25 2.35C11.05 6.4 10.7 9.15 11.35 11.05L14.2 12.45 10.45 13.7C10.55 16.55 11.35 19.25 12.55 21.65\"/><rect x=\"7.05\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"15.45\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M7.2 15.7c1.55 2.35 3.35 3.35 4.8 3.35 1.45 0 3.25-1 4.8-3.35\" stroke-width=\"1.25\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "planned",
         "version": "v1.0.0",
         "category": "Systems"
       },
@@ -1832,7 +1832,7 @@
           "path": "/boss",
           "url": "https://os.briancrink.com/boss",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1845,7 +1845,7 @@
           "path": "/career",
           "url": "https://os.briancrink.com/career",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1858,7 +1858,7 @@
           "path": "/dev",
           "url": "https://os.briancrink.com/dev",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1871,7 +1871,7 @@
           "path": "/life",
           "url": "https://os.briancrink.com/life",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1890,7 +1890,7 @@
       "url": "https://portal.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"1\"/><line x1=\"14.5\" y1=\"12\" x2=\"14.5\" y2=\"12.01\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "released",
         "version": "v1.0.0",
         "category": "Systems"
       },
@@ -1900,7 +1900,7 @@
           "path": "/#boss",
           "url": "https://portal.briancrink.com/#boss",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1913,7 +1913,7 @@
           "path": "/#career",
           "url": "https://portal.briancrink.com/#career",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1926,7 +1926,7 @@
           "path": "/#dev",
           "url": "https://portal.briancrink.com/#dev",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1939,7 +1939,7 @@
           "path": "/#life",
           "url": "https://portal.briancrink.com/#life",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Systems"
           },
@@ -1958,7 +1958,7 @@
       "url": "https://resources.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5c-2-1.5-5-2-9-2v15c4 0 7 .5 9 2 2-1.5 5-2 9-2V3c-4 0-7 .5-9 2z\"/><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"20\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "planned",
         "version": "v1.0.0",
         "category": "Kit"
       },
@@ -1968,7 +1968,7 @@
           "path": "/dev",
           "url": "https://resources.briancrink.com/dev",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Kit"
           },
@@ -1981,7 +1981,7 @@
           "path": "/github",
           "url": "https://resources.briancrink.com/github",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Kit"
           },
@@ -1994,7 +1994,7 @@
           "path": "/site",
           "url": "https://resources.briancrink.com/site",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Kit"
           },
@@ -2104,7 +2104,7 @@
           "path": "/cookie",
           "url": "https://site.briancrink.com/cookie",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2117,7 +2117,7 @@
           "path": "/disclaimer",
           "url": "https://site.briancrink.com/disclaimer",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2130,7 +2130,7 @@
           "path": "/editorial",
           "url": "https://site.briancrink.com/editorial",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2143,7 +2143,7 @@
           "path": "/legal",
           "url": "https://site.briancrink.com/legal",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2156,7 +2156,7 @@
           "path": "/privacy",
           "url": "https://site.briancrink.com/privacy",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2169,7 +2169,7 @@
           "path": "/architecture",
           "url": "https://site.briancrink.com/architecture",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2182,7 +2182,7 @@
           "path": "/backlog",
           "url": "https://site.briancrink.com/backlog",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2195,7 +2195,7 @@
           "path": "/changelog",
           "url": "https://site.briancrink.com/changelog",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2208,7 +2208,7 @@
           "path": "/contact",
           "url": "https://site.briancrink.com/contact",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2221,7 +2221,7 @@
           "path": "/design",
           "url": "https://site.briancrink.com/design",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2247,7 +2247,7 @@
           "path": "/docs",
           "url": "https://site.briancrink.com/docs",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2260,7 +2260,7 @@
           "path": "/issues",
           "url": "https://site.briancrink.com/issues",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2273,7 +2273,7 @@
           "path": "/lab",
           "url": "https://site.briancrink.com/lab",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2299,7 +2299,7 @@
           "path": "/policy",
           "url": "https://site.briancrink.com/policy",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2312,7 +2312,7 @@
           "path": "/releases",
           "url": "https://site.briancrink.com/releases",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2325,7 +2325,7 @@
           "path": "/repos",
           "url": "https://site.briancrink.com/repos",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2338,7 +2338,7 @@
           "path": "/roadmap",
           "url": "https://site.briancrink.com/roadmap",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2364,7 +2364,7 @@
           "path": "/tasks",
           "url": "https://site.briancrink.com/tasks",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2377,7 +2377,7 @@
           "path": "/updates",
           "url": "https://site.briancrink.com/updates",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2390,7 +2390,7 @@
           "path": "/stack",
           "url": "https://site.briancrink.com/stack",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2403,7 +2403,7 @@
           "path": "/tos",
           "url": "https://site.briancrink.com/tos",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Site"
           },
@@ -2422,7 +2422,7 @@
       "url": "https://social.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"5\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"6\" r=\"2.5\"/><circle cx=\"18\" cy=\"18\" r=\"2.5\"/><line x1=\"7.3\" y1=\"10.8\" x2=\"15.7\" y2=\"7.2\"/><line x1=\"7.3\" y1=\"13.2\" x2=\"15.7\" y2=\"16.8\"/></svg>",
       "dev": {
-        "status": "in-development",
+        "status": "planned",
         "version": "v1.0.0",
         "category": "Social"
       },
@@ -2432,7 +2432,7 @@
           "path": "/contact",
           "url": "https://social.briancrink.com/contact",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Social"
           },
@@ -2445,7 +2445,7 @@
           "path": "/event",
           "url": "https://social.briancrink.com/event",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Social"
           },
@@ -2458,7 +2458,7 @@
           "path": "/feed",
           "url": "https://social.briancrink.com/feed",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Social"
           },
@@ -2471,7 +2471,7 @@
           "path": "/profile",
           "url": "https://social.briancrink.com/profile",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Social"
           },
@@ -2484,7 +2484,7 @@
           "path": "/space",
           "url": "https://social.briancrink.com/space",
           "dev": {
-            "status": "in-development",
+            "status": "planned",
             "version": "v1.0.0",
             "category": "Social"
           },
@@ -2851,7 +2851,7 @@
           "path": "/relational",
           "url": "https://space.briancrink.com/relational",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v0.1.0",
             "category": "Spaces"
           },
