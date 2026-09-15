@@ -351,11 +351,11 @@
     }
 
     .mode-toggle.development .toggle-slider {
-      background: rgba(125, 211, 252, 0.9);
+      background: rgba(62, 194, 255, 0.701);
     }
 
     .mode-toggle.availability .toggle-slider {
-      background: #22c55e;
+      background: #00ff5e9e;
     }
 
     body.light .toggle-slider,
@@ -364,11 +364,11 @@
     }
 
     body.light .mode-toggle.development .toggle-slider {
-      background: rgba(125, 211, 252, 0.9);
+      background: rgba(42, 187, 255, 0.712);
     }
 
     body.light .mode-toggle.availability .toggle-slider {
-      background: #22c55e;
+      background: #00eb56c3;
     }
 
     .toggle-option {
@@ -473,58 +473,6 @@
       opacity: 0.85;
     }
 
-    .legend .dev-pill.is-active[data-dev="planned"] {
-      background: #ddd6fe;
-      color: #4c1d95;
-    }
-
-    .legend .dev-pill.is-active[data-dev="in-development"] {
-      background: #7dd3fc;
-      color: #0c4a6e;
-    }
-
-    .legend .dev-pill.is-active[data-dev="released"] {
-      background: #4ade80;
-      color: #14532d;
-    }
-
-    .legend .availability-pill.is-active[data-availability="unlisted"] {
-      background: #d1d5db;
-      color: #111827;
-    }
-
-    .legend .availability-pill.is-active[data-availability="preview"] {
-      background: #e24ed8;
-      color: #772c75;
-    }
-
-    .legend .availability-pill.is-active[data-availability="live"] {
-      background: #4ade80;
-      color: #14532d;
-    }
-
-    .legend .availability-pill.is-active[data-availability="maintenance"] {
-      background: #fbbf24;
-      color: #78350f;
-    }
-
-    .legend .availability-pill.is-active[data-availability="down"] {
-      background: #f87171;
-      color: #7f1d1d;
-    }
-
-    .legend .version-pill.is-active {
-      background: #93c5fd;
-      color: #1e3a8a;
-      border-color: #bfdbfe;
-    }
-
-    .legend .system-tag.is-active {
-      background: #9ca3af;
-      color: #111827;
-      border-color: #d1d5db;
-    }
-
     body.light .legend { color: rgba(26, 26, 26, 0.45); }
 
     body[data-view="development"] .legend-status,
@@ -617,6 +565,20 @@
 
     .sub-page-link:hover { opacity: 0.85; }
 
+    .availability-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px 2px 7px;
+      border-radius: 9999px;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      white-space: nowrap;
+      font-family: ui-monospace, "SF Mono", Menlo, Monaco, "Courier New", monospace;
+    }
+
     .availability-dot {
       width: 8px;
       height: 8px;
@@ -624,14 +586,6 @@
       flex-shrink: 0;
       background: #6b7280;
     }
-
-    .availability-dot[data-availability="unlisted"] { background: #6b7280; }
-    .availability-dot[data-availability="preview"] { background: #c522c0; }
-    .availability-dot[data-availability="live"] { background: #22c55e; }
-    .availability-dot[data-availability="maintenance"] { background: #f59e0b; }
-    .availability-dot[data-availability="down"] { background: #ef4444; }
-
-    
 
     .dev-pill,
     .version-pill,
@@ -649,10 +603,45 @@
       font-family: ui-monospace, "SF Mono", Menlo, Monaco, "Courier New", monospace;
     }
 
+    .availability-dot[data-availability="unlisted"] { background: #9d9d9d; }
+    .availability-dot[data-availability="preview"] { background: #c522c0; }
+    .availability-dot[data-availability="live"] { background: #22c55e; }
+    .availability-dot[data-availability="maintenance"] { background: #f59e0b; }
+    .availability-dot[data-availability="down"] { background: #ef4444; }
+
+    .version-pill {
+      background: #f7e92a28;
+      color: #ffff92;
+      border: 1px solid #fff478bc;
+    }
+
+    .legend .version-pill.is-active {
+      background: #f7e92a54;
+      color: #ffff92;
+      border-color: #fff478bc;
+    }
+
+    .system-tag {
+      background: #32343871;
+      color: #9ca3af;
+      border: 1px solid rgba(156, 163, 175, 0.45);
+    }
+
+    .legend .system-tag.is-active {
+      background: #a4a4a47a;
+      color: #cfcfcf;
+      border-color: #a3a3a3ab; /*change to chroma border*/
+    }
+
     .dev-pill[data-dev="planned"] {
       background: rgba(196, 181, 253, 0.18);
       color: #ddd6fe;
       border: 1px solid rgba(196, 181, 253, 0.32);
+    }
+
+    .legend .dev-pill.is-active[data-dev="planned"] {
+      background: #a490ff88;
+      color: #e1ceffe1;
     }
 
     .dev-pill[data-dev="in-development"] {
@@ -661,24 +650,20 @@
       border: 1px solid rgba(125, 211, 252, 0.32);
     }
 
+    .legend .dev-pill.is-active[data-dev="in-development"] {
+      background: #57aeff57;
+      color: #aae0ffc4;
+    }
+
     .dev-pill[data-dev="released"] {
       background: rgba(34, 197, 94, 0.16);
       color: #4ade80;
       border: 1px solid rgba(34, 197, 94, 0.28);
     }
 
-    .availability-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 2px 8px 2px 7px;
-      border-radius: 9999px;
-      font-size: 0.64rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      line-height: 1.3;
-      white-space: nowrap;
-      font-family: ui-monospace, "SF Mono", Menlo, Monaco, "Courier New", monospace;
+    .legend .dev-pill.is-active[data-dev="released"] {
+      background: #28ff7762;
+      color: #b6ffd3ea;
     }
 
     .availability-pill[data-availability="unlisted"] {
@@ -687,10 +672,20 @@
       border: 1px solid rgba(107, 114, 128, 0.28);
     }
 
+    .legend .availability-pill.is-active[data-availability="unlisted"] {
+      background: #bababa7f;
+      color: #e7e7e7ee;
+    }
+
     .availability-pill[data-availability="preview"] {
       background: rgba(136, 59, 105, 0.18);
-      color: #da49ce;
+      color: #f361e7;
       border: 1px solid rgba(216, 46, 210, 0.28);
+    }
+
+    .legend .availability-pill.is-active[data-availability="preview"] {
+      background: #ff68f56a;
+      color: #ffb7fee3;
     }
 
     .availability-pill[data-availability="live"] {
@@ -699,10 +694,20 @@
       border: 1px solid rgba(39, 201, 63, 0.32);
     }
 
+    .legend .availability-pill.is-active[data-availability="live"] {
+      background: #61ff9b71;
+      color: #c0ffd9e6;
+    }
+
     .availability-pill[data-availability="maintenance"] {
       background: rgba(245, 158, 11, 0.16);
       color: #fbbf24;
       border: 1px solid rgba(245, 158, 11, 0.28);
+    }
+
+    .legend .availability-pill.is-active[data-availability="maintenance"] {
+      background: #ffcf557f;
+      color: #ffce78ed;
     }
 
     .availability-pill[data-availability="down"] {
@@ -711,16 +716,33 @@
       border: 1px solid rgba(239, 68, 68, 0.28);
     }
 
-    .version-pill {
-      background: #1e40af;
-      color: #ffffff;
-      border: 1px solid #93c5fd;
+    .legend .availability-pill.is-active[data-availability="down"] {
+      background: #ff60608f;
+      color: #ffa7a7;
     }
 
-    .system-tag {
-      background: #1f2937;
-      color: #9ca3af;
-      border: 1px solid rgba(156, 163, 175, 0.45);
+    body.light .version-pill {
+      background: #fced1b2c;
+      color: #848400;
+      border: 1px solid #ecda1ddd;
+    }
+
+    body.light .legend .version-pill.is-active {
+      background: #f7e92a90;
+      color: #848400;
+      border-color: #ecda1ddd;
+    }
+
+    body.light .system-tag {
+      background: #f1f1f132;
+      color: #77787a;
+      border-color: rgba(87, 87, 87, 0.28);
+    }
+
+    body.light .legend .system-tag.is-active {
+      background: #a4a4a453;
+      color: #77787a;
+      border-color: #a3a3a3ab; /*change to chroma border*/
     }
 
     body.light .dev-pill[data-dev="planned"] {
@@ -729,20 +751,79 @@
       border-color: rgba(167, 139, 250, 0.28);
     }
 
+    body.light .legend .dev-pill.is-active[data-dev="planned"] {
+      background: #a490ff88;
+      color: #7c3aed;
+    }
+
     body.light .dev-pill[data-dev="in-development"] {
       background: rgba(14, 165, 233, 0.12);
       color: #0284c7;
       border-color: rgba(14, 165, 233, 0.24);
     }
 
-    body.light .system-tag {
-      background: #f3f4f6;
-      color: #4b5563;
-      border-color: rgba(0, 0, 0, 0.08);
+    body.light .legend .dev-pill.is-active[data-dev="in-development"] {
+      background: #57aeff57;
+      color: #0284c7;
+    }
+
+    body.light .legend .dev-pill[data-dev="released"] {
+      background: #28ff772d;
+      color: #269e52;
+    }
+
+    body.light .legend .dev-pill.is-active[data-dev="released"] {
+      background: #28ff7762;
+      color: #269e52;
     }
 
     body.light .availability-pill[data-availability="unlisted"] {
       color: #4b5563;
+    }
+
+    body.light .legend .availability-pill.is-active[data-dev="unlisted"] {
+      background: #bababa7f;
+      color: #e7e7e7ee;
+    }
+
+    body.light .legend .availability-pill[data-dev="preview"] {
+      background: #ff68f56a;
+      color: #ffb7fee3;
+    }
+
+    body.light .legend .availability-pill.is-active[data-dev="preview"] {
+      background: #ff68f56a;
+      color: #ffb7fee3;
+    }
+
+    body.light .legend .availability-pill[data-dev="live"] {
+      background: #61ff9b71;
+      color: #c0ffd9e6;
+    }
+
+    body.light .legend .availability-pill.is-active[data-dev="live"] {
+      background: #61ff9b71;
+      color: #c0ffd9e6;
+    }
+
+    body.light .legend .availability-pill[data-dev="maintenance"] {
+      background: #ffcf557f;
+      color: #ffce78ed;
+    }
+
+    body.light .legend .availability-pill.is-active[data-dev="maintenance"] {
+      background: #ffcf557f;
+      color: #ffce78ed;
+    }
+
+    body.light .legend .availability-pill[data-dev="down"] {
+      background: #ff60608f;
+      color: #ffa7a7;
+    }
+
+    body.light .legend .availability-pill.is-active[data-dev="down"] {
+      background: #ff60608f;
+      color: #ffa7a7;
     }
 
     body[data-view="development"] .links .availability-pill { display: none; }
@@ -910,9 +991,9 @@
     function topoStroke(t) {
       const lift = 0;
       const g0 = 16 + lift * 140;
-      const a0 = Math.min(0.9, 0.85 + lift);
+      const a0 = Math.min(0.9, 0.85 + lift); //0.85 sets dark mode topography line opacity 
       const g1 = 30 + lift * 40;
-      const a1 = Math.min(0.18, 0.10 + lift * 0.08);
+      const a1 = Math.min(0.18, 0.10 + lift * 0.08); //0.10 sets dark mode topography line opacity 
       const u = t < 0 ? 0 : t > 1 ? 1 : t;
       const g = Math.round(g0 + (g1 - g0) * u);
       const a = a0 + (a1 - a0) * u;
