@@ -488,6 +488,16 @@
       color: #14532d;
     }
 
+    .legend .availability-pill.is-active[data-availability="unlisted"] {
+      background: #d1d5db;
+      color: #111827;
+    }
+
+    .legend .availability-pill.is-active[data-availability="preview"] {
+      background: #e24ed8;
+      color: #772c75;
+    }
+
     .legend .availability-pill.is-active[data-availability="live"] {
       background: #4ade80;
       color: #14532d;
@@ -501,11 +511,6 @@
     .legend .availability-pill.is-active[data-availability="down"] {
       background: #f87171;
       color: #7f1d1d;
-    }
-
-    .legend .availability-pill.is-active[data-availability="planned"] {
-      background: #d1d5db;
-      color: #111827;
     }
 
     .legend .version-pill.is-active {
@@ -620,11 +625,13 @@
       background: #6b7280;
     }
 
+    .availability-dot[data-availability="unlisted"] { background: #6b7280; }
+    .availability-dot[data-availability="preview"] { background: #c522c0; }
     .availability-dot[data-availability="live"] { background: #22c55e; }
     .availability-dot[data-availability="maintenance"] { background: #f59e0b; }
-    .availability-dot[data-availability="unresponsive"],
     .availability-dot[data-availability="down"] { background: #ef4444; }
-    .availability-dot[data-availability="planned"] { background: #6b7280; }
+
+    
 
     .dev-pill,
     .version-pill,
@@ -674,6 +681,18 @@
       font-family: ui-monospace, "SF Mono", Menlo, Monaco, "Courier New", monospace;
     }
 
+    .availability-pill[data-availability="unlisted"] {
+      background: rgba(107, 114, 128, 0.18);
+      color: #d1d5db;
+      border: 1px solid rgba(107, 114, 128, 0.28);
+    }
+
+    .availability-pill[data-availability="preview"] {
+      background: rgba(136, 59, 105, 0.18);
+      color: #da49ce;
+      border: 1px solid rgba(216, 46, 210, 0.28);
+    }
+
     .availability-pill[data-availability="live"] {
       background: rgba(39, 201, 63, 0.16);
       color: #4ade80;
@@ -686,17 +705,10 @@
       border: 1px solid rgba(245, 158, 11, 0.28);
     }
 
-    .availability-pill[data-availability="unresponsive"],
     .availability-pill[data-availability="down"] {
       background: rgba(239, 68, 68, 0.16);
       color: #f87171;
       border: 1px solid rgba(239, 68, 68, 0.28);
-    }
-
-    .availability-pill[data-availability="planned"] {
-      background: rgba(107, 114, 128, 0.18);
-      color: #d1d5db;
-      border: 1px solid rgba(107, 114, 128, 0.28);
     }
 
     .version-pill {
@@ -729,7 +741,7 @@
       border-color: rgba(0, 0, 0, 0.08);
     }
 
-    body.light .availability-pill[data-availability="planned"] {
+    body.light .availability-pill[data-availability="unlisted"] {
       color: #4b5563;
     }
 
@@ -841,10 +853,11 @@
               <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="planned">Planned</button>
               <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="in-development">In Development</button>
               <button type="button" class="legend-dev dev-pill" data-filter-type="dev" data-dev="released">Released</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="unlisted"><span class="availability-dot" data-availability="unlisted"></span>Unlisted</button>
+              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="preview"><span class="availability-dot" data-availability="preview"></span>Preview</button>
               <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="live"><span class="availability-dot" data-availability="live"></span>Live</button>
               <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="maintenance"><span class="availability-dot" data-availability="maintenance"></span>Maintenance</button>
               <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="down"><span class="availability-dot" data-availability="down"></span>Down</button>
-              <button type="button" class="legend-status availability-pill" data-filter-type="availability" data-availability="planned"><span class="availability-dot" data-availability="planned"></span>Unlisted</button>
             </div>
             <div class="legend-row legend-categories legend-dev" id="legendCategories"></div>
             <div class="legend-row legend-versions legend-dev" id="legendVersions"></div>
@@ -1126,9 +1139,9 @@
     const LIVE_LABEL = {
       live: 'Live',
       maintenance: 'Maintenance',
-      unresponsive: 'Unresponsive',
+      preview: 'Preview',
       down: 'Down',
-      planned: 'Unlisted'
+      unlisted: 'Unlisted'
     };
 
     function nodeDev(node) {
@@ -1136,7 +1149,7 @@
     }
 
     function nodeAvailability(node) {
-      return (node.availability && node.availability.status) || 'planned';
+      return (node.availability && node.availability.status) || 'unlisted';
     }
 
     function nodeVersion(node) {
@@ -1222,7 +1235,7 @@
     });
 
     function metaBits(node) {
-      const live = (node.availability && node.availability.status) || 'planned';
+      const live = (node.availability && node.availability.status) || 'unlisted';
       const dev = (node.dev && node.dev.status) || 'planned';
       const version = (node.dev && node.dev.version) || '';
       const category = (node.dev && node.dev.category) || '';

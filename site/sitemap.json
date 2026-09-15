@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11",
+  "updated": "2026-09-15",
   "source": "site.briancrink.com/map",
   "modes": {
     "development": {
@@ -13,11 +13,11 @@
     "availability": {
       "label": "Availability",
       "statuses": [
-        "live",
+        "unlisted",
+        "preview",
         "maintenance",
-        "unresponsive",
         "down",
-        "planned"
+        "live"
       ]
     }
   },
@@ -43,7 +43,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -56,7 +56,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -69,7 +69,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -82,7 +82,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -95,7 +95,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -121,7 +121,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -134,7 +134,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -142,7 +142,7 @@
           "path": "/feed",
           "url": "https://briancrink.com/feed",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -155,7 +155,7 @@
           "path": "/os",
           "url": "https://briancrink.com/os",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -168,7 +168,7 @@
           "path": "/portal",
           "url": "https://briancrink.com/portal",
           "dev": {
-            "status": "released",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -181,7 +181,7 @@
           "path": "/resume",
           "url": "https://briancrink.com/resume",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -199,7 +199,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -212,7 +212,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -233,7 +233,7 @@
           "path": "/social",
           "url": "https://briancrink.com/social",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Identity"
           },
@@ -251,7 +251,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -264,7 +264,7 @@
             "category": "Identity"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         }
       ],
@@ -293,7 +293,7 @@
             "category": "Academia"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -306,7 +306,7 @@
             "category": "Academia"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -319,12 +319,12 @@
             "category": "Academia"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -348,7 +348,7 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -361,7 +361,7 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -374,7 +374,7 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -387,7 +387,7 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -400,7 +400,7 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -413,12 +413,12 @@
             "category": "Platform"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -442,7 +442,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -455,7 +455,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -468,7 +468,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -481,12 +481,12 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -510,7 +510,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -523,7 +523,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -536,7 +536,7 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -549,12 +549,12 @@
             "category": "Apps"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -578,7 +578,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -591,7 +591,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -604,7 +604,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -617,7 +617,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -630,7 +630,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -643,7 +643,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -656,7 +656,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -669,7 +669,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -682,7 +682,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -695,12 +695,12 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -709,7 +709,7 @@
       "url": "https://career.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"3 17 9 11 13 15 21 6\"/><polyline points=\"15 6 21 6 21 12\"/></svg>",
       "dev": {
-        "status": "planned",
+        "status": "in-development",
         "version": "v0.1.0",
         "category": "Career"
       },
@@ -724,7 +724,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "unlisted"
           }
         },
         {
@@ -737,7 +737,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -750,7 +750,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -762,8 +762,8 @@
             "version": "v0.1.0",
             "category": "Career"
           },
-          "availability": {
-            "status": "planned"
+                    "availability": {
+            "status": "unlisted"
           }
         },
         {
@@ -776,7 +776,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -789,7 +789,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "unlisted"
           }
         },
         {
@@ -802,7 +802,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "unlisted"
           }
         },
         {
@@ -815,7 +815,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -828,7 +828,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -841,7 +841,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -854,7 +854,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "live"
           }
         },
         {
@@ -867,7 +867,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "unlisted"
           }
         },
         {
@@ -880,7 +880,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -893,12 +893,12 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "live"
       }
     },
     {
@@ -922,7 +922,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -935,7 +935,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -948,7 +948,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -961,7 +961,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -974,7 +974,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -987,7 +987,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1000,7 +1000,7 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1013,12 +1013,12 @@
             "category": "Contact"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -1042,7 +1042,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1055,7 +1055,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1068,7 +1068,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1081,7 +1081,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1094,7 +1094,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "live"
           }
         },
         {
@@ -1107,7 +1107,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1120,7 +1120,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1133,7 +1133,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "live"
           }
         },
         {
@@ -1146,7 +1146,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "live"
           }
         },
         {
@@ -1159,7 +1159,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1172,7 +1172,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1185,7 +1185,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1198,7 +1198,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "live"
           }
         },
         {
@@ -1211,7 +1211,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1224,7 +1224,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1237,7 +1237,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1250,7 +1250,7 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1263,12 +1263,12 @@
             "category": "Development"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -1277,7 +1277,7 @@
       "url": "https://feed.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 11a9 9 0 0 1 9 9\"/><path d=\"M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/></svg>",
       "dev": {
-        "status": "planned",
+        "status": "in-development",
         "version": "v1.0.0",
         "category": "Content"
       },
@@ -1292,7 +1292,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1305,7 +1305,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1318,7 +1318,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1331,7 +1331,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1344,7 +1344,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1357,7 +1357,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1370,7 +1370,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1383,7 +1383,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1396,7 +1396,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1409,7 +1409,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1422,7 +1422,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1435,7 +1435,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1448,7 +1448,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1461,7 +1461,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1474,7 +1474,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1487,7 +1487,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1500,7 +1500,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1513,7 +1513,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1526,7 +1526,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1539,7 +1539,7 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1552,12 +1552,12 @@
             "category": "Content"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "live"
       }
     },
     {
@@ -1581,7 +1581,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -1615,7 +1615,7 @@
           "path": "/resume",
           "url": "https://hire.briancrink.com/resume",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Career"
           },
@@ -1649,7 +1649,7 @@
             "category": "Life"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1662,12 +1662,12 @@
             "category": "Life"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -1676,7 +1676,7 @@
       "url": "https://jobs.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10.6\" cy=\"10.6\" r=\"5.55\"/><line x1=\"14.7\" y1=\"14.7\" x2=\"19.35\" y2=\"19.35\"/></svg>",
       "dev": {
-        "status": "planned",
+        "status": "in-development",
         "version": "v0.1.0",
         "category": "Career"
       },
@@ -1691,7 +1691,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1704,7 +1704,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1717,7 +1717,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1730,7 +1730,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1743,7 +1743,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1756,7 +1756,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1769,7 +1769,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1782,7 +1782,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1795,7 +1795,7 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1808,12 +1808,12 @@
             "category": "Career"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -1822,7 +1822,7 @@
       "url": "https://os.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2.3\" y=\"2.3\" width=\"19.4\" height=\"19.4\" rx=\"5.2\"/><path d=\"M12.25 2.35C11.05 6.4 10.7 9.15 11.35 11.05L14.2 12.45 10.45 13.7C10.55 16.55 11.35 19.25 12.55 21.65\"/><rect x=\"7.05\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"15.45\" y=\"8.05\" width=\"1.5\" height=\"3.35\" rx=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M7.2 15.7c1.55 2.35 3.35 3.35 4.8 3.35 1.45 0 3.25-1 4.8-3.35\" stroke-width=\"1.25\"/></svg>",
       "dev": {
-        "status": "planned",
+        "status": "in-development",
         "version": "v1.0.0",
         "category": "Systems"
       },
@@ -1832,12 +1832,12 @@
           "path": "/boss",
           "url": "https://os.briancrink.com/boss",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1845,12 +1845,12 @@
           "path": "/career",
           "url": "https://os.briancrink.com/career",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1858,12 +1858,12 @@
           "path": "/dev",
           "url": "https://os.briancrink.com/dev",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1871,17 +1871,17 @@
           "path": "/life",
           "url": "https://os.briancrink.com/life",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -1890,7 +1890,7 @@
       "url": "https://portal.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"1\"/><line x1=\"14.5\" y1=\"12\" x2=\"14.5\" y2=\"12.01\"/></svg>",
       "dev": {
-        "status": "released",
+        "status": "in-development",
         "version": "v1.0.0",
         "category": "Systems"
       },
@@ -1900,12 +1900,12 @@
           "path": "/#boss",
           "url": "https://portal.briancrink.com/#boss",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -1913,12 +1913,12 @@
           "path": "/#career",
           "url": "https://portal.briancrink.com/#career",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -1926,12 +1926,12 @@
           "path": "/#dev",
           "url": "https://portal.briancrink.com/#dev",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -1939,12 +1939,12 @@
           "path": "/#life",
           "url": "https://portal.briancrink.com/#life",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Systems"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         }
       ],
@@ -1973,7 +1973,7 @@
             "category": "Kit"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1986,7 +1986,7 @@
             "category": "Kit"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -1999,12 +1999,12 @@
             "category": "Kit"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -2028,7 +2028,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2041,7 +2041,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2054,7 +2054,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2067,7 +2067,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2080,12 +2080,12 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -2109,7 +2109,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2122,7 +2122,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2135,7 +2135,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2148,7 +2148,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2161,7 +2161,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2174,7 +2174,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2187,7 +2187,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2200,7 +2200,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2213,7 +2213,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2226,7 +2226,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2239,7 +2239,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2252,7 +2252,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2265,7 +2265,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2273,12 +2273,12 @@
           "path": "/lab",
           "url": "https://site.briancrink.com/lab",
           "dev": {
-            "status": "planned",
+            "status": "in-development",
             "version": "v1.0.0",
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2291,7 +2291,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2304,7 +2304,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2317,7 +2317,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2330,7 +2330,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2343,7 +2343,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2356,7 +2356,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2369,7 +2369,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2382,7 +2382,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2395,7 +2395,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2408,7 +2408,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         }
       ],
@@ -2422,7 +2422,7 @@
       "url": "https://social.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"5\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"6\" r=\"2.5\"/><circle cx=\"18\" cy=\"18\" r=\"2.5\"/><line x1=\"7.3\" y1=\"10.8\" x2=\"15.7\" y2=\"7.2\"/><line x1=\"7.3\" y1=\"13.2\" x2=\"15.7\" y2=\"16.8\"/></svg>",
       "dev": {
-        "status": "planned",
+        "status": "in-development",
         "version": "v1.0.0",
         "category": "Social"
       },
@@ -2437,7 +2437,7 @@
             "category": "Social"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2450,7 +2450,7 @@
             "category": "Social"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2463,7 +2463,7 @@
             "category": "Social"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2476,7 +2476,7 @@
             "category": "Social"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         },
         {
@@ -2489,7 +2489,7 @@
             "category": "Social"
           },
           "availability": {
-            "status": "live"
+            "status": "preview"
           }
         }
       ],
@@ -2518,7 +2518,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2531,7 +2531,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2544,7 +2544,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2557,7 +2557,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2570,7 +2570,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2583,7 +2583,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2596,7 +2596,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2609,7 +2609,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2622,7 +2622,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2635,7 +2635,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2648,7 +2648,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2661,7 +2661,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2674,7 +2674,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2687,7 +2687,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2700,7 +2700,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2713,7 +2713,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2726,7 +2726,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2739,7 +2739,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2752,7 +2752,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2765,7 +2765,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2778,7 +2778,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2791,7 +2791,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2804,7 +2804,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2817,7 +2817,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2830,7 +2830,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2843,7 +2843,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2856,7 +2856,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2869,7 +2869,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2882,7 +2882,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2895,7 +2895,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2908,7 +2908,7 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2921,12 +2921,12 @@
             "category": "Spaces"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -2950,7 +2950,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2963,7 +2963,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2976,7 +2976,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -2989,7 +2989,7 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3002,12 +3002,12 @@
             "category": "Commerce"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -3031,7 +3031,7 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3044,7 +3044,7 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3057,7 +3057,7 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3070,7 +3070,7 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3083,7 +3083,7 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3096,12 +3096,12 @@
             "category": "Support"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -3125,7 +3125,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3138,7 +3138,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3151,7 +3151,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3164,7 +3164,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3177,7 +3177,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3190,7 +3190,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3203,7 +3203,7 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3216,12 +3216,12 @@
             "category": "Tech"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     },
     {
@@ -3245,7 +3245,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3258,7 +3258,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3271,7 +3271,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3284,7 +3284,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3297,7 +3297,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3310,7 +3310,7 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         },
         {
@@ -3323,12 +3323,12 @@
             "category": "Sites"
           },
           "availability": {
-            "status": "planned"
+            "status": "preview"
           }
         }
       ],
       "availability": {
-        "status": "planned"
+        "status": "preview"
       }
     }
   ]

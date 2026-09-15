@@ -95,7 +95,7 @@
       right: 0;
       z-index: 30;
       width: 100%;
-      padding: 10px 16px 12px;
+      padding: 10px 56px 12px;
       background-color: transparent;
     }
 
@@ -116,6 +116,7 @@
       overflow-y: auto;
       overscroll-behavior-y: none;
       -webkit-overflow-scrolling: touch;
+      padding: 0 56px;
     }
 
     .divider {
@@ -529,8 +530,8 @@
 
     .links {
       width: 100%;
-      column-width: 280px;
-      column-gap: 3rem;
+      column-width: 440px;
+      column-gap: 1.25rem;
       text-align: left;
     }
 
@@ -547,6 +548,8 @@
     }
 
     @media (max-width: 600px) {
+      .header { padding-left: 16px; padding-right: 16px; }
+      #scroller { padding-left: 16px; padding-right: 16px; }
       .links {
         max-width: 320px;
         margin: 0 auto;
@@ -580,18 +583,11 @@
     .page-row,
     .domain-row {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.28rem;
-      width: 100%;
-    }
-
-    body[data-view="availability"] .page-row,
-    body[data-view="availability"] .domain-row {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
       gap: 0.28rem 0.45rem;
+      width: 100%;
     }
 
     .page-row { margin-left: 0.75rem; }
