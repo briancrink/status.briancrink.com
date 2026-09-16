@@ -446,6 +446,32 @@
       },
       "pages": [
         {
+          "title": "AccessEdu App",
+          "path": "/accessedu",
+          "url": "https://app.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "CareerOS App",
+          "path": "/careeros",
+          "url": "https://app.briancrink.com/careeros",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Contact",
           "path": "/contact",
           "url": "https://app.briancrink.com/contact",
@@ -460,8 +486,21 @@
         },
         {
           "title": "Development",
-          "path": "/dev",
-          "url": "https://app.briancrink.com/dev",
+          "path": "/development",
+          "url": "https://app.briancrink.com/development",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Minimaliste App",
+          "path": "/minimaliste",
+          "url": "https://app.briancrink.com/minimaliste",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
@@ -485,9 +524,35 @@
           }
         },
         {
+          "title": "Streamline App",
+          "path": "/streamline",
+          "url": "https://app.briancrink.com/streamline",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Support",
           "path": "/support",
           "url": "https://app.briancrink.com/support",
+          "dev": {
+            "status": "planned",
+            "version": "v2.0.0",
+            "category": "Apps"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "TinySpace App",
+          "path": "/tinyspace",
+          "url": "https://app.briancrink.com/tinyspace",
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
