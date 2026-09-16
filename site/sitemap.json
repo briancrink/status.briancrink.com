@@ -634,9 +634,9 @@
           }
         },
         {
-          "title": "Opportunities",
-          "path": "/opportunities",
-          "url": "https://business.briancrink.com/opportunities",
+          "title": "Opportunity",
+          "path": "/opportunity",
+          "url": "https://business.briancrink.com/opportunity",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -1837,7 +1837,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1850,7 +1850,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1863,7 +1863,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1876,12 +1876,12 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         }
       ],
       "availability": {
-        "status": "preview"
+        "status": "live"
       }
     },
     {
@@ -1905,7 +1905,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1918,7 +1918,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1931,7 +1931,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -1944,7 +1944,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         }
       ],
@@ -2178,6 +2178,19 @@
           }
         },
         {
+          "title": "Site Availability",
+          "path": "/availability",
+          "url": "https://site.briancrink.com/availability",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Site"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
           "title": "Site Backlog",
           "path": "/backlog",
           "url": "https://site.briancrink.com/backlog",
@@ -2234,12 +2247,12 @@
           "path": "/development",
           "url": "https://site.briancrink.com/development",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -2286,12 +2299,12 @@
           "path": "/map",
           "url": "https://site.briancrink.com/map",
           "dev": {
-            "status": "in-development",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -2330,7 +2343,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -2356,7 +2369,7 @@
             "category": "Site"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -2413,7 +2426,7 @@
         }
       ],
       "availability": {
-        "status": "live"
+        "status": "preview"
       }
     },
     {
