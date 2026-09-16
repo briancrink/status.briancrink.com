@@ -30,7 +30,7 @@
       "dev": {
         "status": "in-development",
         "version": "v1.0.0",
-        "category": "Identity"
+        "category": "Site"
       },
       "pages": [
         {
@@ -40,7 +40,7 @@
           "dev": {
             "status": "planned",
             "version": "v3.0.0",
-            "category": "Identity"
+            "category": "Academia"
           },
           "availability": {
             "status": "preview"
@@ -53,7 +53,7 @@
           "dev": {
             "status": "planned",
             "version": "v3.0.0",
-            "category": "Identity"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -66,7 +66,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Identity"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -79,7 +79,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Identity"
+            "category": "Contact"
           },
           "availability": {
             "status": "preview"
@@ -92,7 +92,7 @@
           "dev": {
             "status": "planned",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -105,7 +105,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Career"
           },
           "availability": {
             "status": "live"
@@ -118,7 +118,7 @@
           "dev": {
             "status": "planned",
             "version": "v4.0.0",
-            "category": "Identity"
+            "category": "Social"
           },
           "availability": {
             "status": "preview"
@@ -131,7 +131,7 @@
           "dev": {
             "status": "planned",
             "version": "v4.0.0",
-            "category": "Identity"
+            "category": "Home"
           },
           "availability": {
             "status": "preview"
@@ -144,7 +144,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Feed"
           },
           "availability": {
             "status": "live"
@@ -157,7 +157,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Site"
           },
           "availability": {
             "status": "live"
@@ -170,7 +170,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Site"
           },
           "availability": {
             "status": "live"
@@ -183,7 +183,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Career"
           },
           "availability": {
             "status": "live"
@@ -196,7 +196,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Identity"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -209,7 +209,7 @@
           "dev": {
             "status": "planned",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -222,7 +222,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Site"
           },
           "availability": {
             "status": "live"
@@ -235,7 +235,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Identity"
+            "category": "Social"
           },
           "availability": {
             "status": "live"
@@ -248,7 +248,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Identity"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -261,7 +261,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Identity"
+            "category": "Contact"
           },
           "availability": {
             "status": "preview"
@@ -335,7 +335,7 @@
       "dev": {
         "status": "planned",
         "version": "v2.0.0",
-        "category": "Platform"
+        "category": "Development"
       },
       "pages": [
         {
@@ -345,7 +345,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -358,7 +358,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -371,7 +371,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -384,7 +384,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -397,7 +397,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -410,7 +410,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Platform"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -1279,7 +1279,7 @@
       "dev": {
         "status": "in-development",
         "version": "v2.0.0",
-        "category": "Content"
+        "category": "Feed"
       },
       "pages": [
         {
@@ -1289,7 +1289,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1302,7 +1302,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1315,7 +1315,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1328,7 +1328,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1341,7 +1341,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1354,7 +1354,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1367,7 +1367,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1380,7 +1380,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1393,7 +1393,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1406,7 +1406,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1419,7 +1419,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1432,7 +1432,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1445,7 +1445,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1458,7 +1458,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1471,7 +1471,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1484,7 +1484,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1497,7 +1497,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1510,7 +1510,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1523,7 +1523,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1536,7 +1536,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1549,7 +1549,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Content"
+            "category": "Feed"
           },
           "availability": {
             "status": "preview"
@@ -1636,7 +1636,7 @@
       "dev": {
         "status": "planned",
         "version": "v4.0.0",
-        "category": "Life"
+        "category": "Home"
       },
       "pages": [
         {
@@ -1646,7 +1646,7 @@
           "dev": {
             "status": "planned",
             "version": "v4.0.0",
-            "category": "Life"
+            "category": "Home"
           },
           "availability": {
             "status": "preview"
@@ -1659,7 +1659,7 @@
           "dev": {
             "status": "planned",
             "version": "v4.0.0",
-            "category": "Life"
+            "category": "Home"
           },
           "availability": {
             "status": "preview"
@@ -1824,7 +1824,7 @@
       "dev": {
         "status": "in-development",
         "version": "v1.0.0",
-        "category": "Systems"
+        "category": "Site"
       },
       "pages": [
         {
@@ -1834,7 +1834,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1847,7 +1847,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1860,7 +1860,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1873,7 +1873,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1892,7 +1892,7 @@
       "dev": {
         "status": "in-development",
         "version": "v1.0.0",
-        "category": "Systems"
+        "category": "Site"
       },
       "pages": [
         {
@@ -1902,7 +1902,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1915,7 +1915,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1928,7 +1928,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1941,7 +1941,7 @@
           "dev": {
             "status": "in-development",
             "version": "v1.0.0",
-            "category": "Systems"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -1960,7 +1960,7 @@
       "dev": {
         "status": "planned",
         "version": "v1.0.0",
-        "category": "Kit"
+        "category": "Development"
       },
       "pages": [
         {
@@ -1970,7 +1970,7 @@
           "dev": {
             "status": "planned",
             "version": "v1.0.0",
-            "category": "Kit"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -1983,7 +1983,7 @@
           "dev": {
             "status": "planned",
             "version": "v1.0.0",
-            "category": "Kit"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -1996,7 +1996,7 @@
           "dev": {
             "status": "planned",
             "version": "v1.0.0",
-            "category": "Kit"
+            "category": "Development"
           },
           "availability": {
             "status": "preview"
@@ -3018,7 +3018,7 @@
       "dev": {
         "status": "planned",
         "version": "v5.0.0",
-        "category": "Support"
+        "category": "Commerce"
       },
       "pages": [
         {
@@ -3028,7 +3028,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3041,7 +3041,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3054,7 +3054,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3067,7 +3067,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3080,7 +3080,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3093,7 +3093,7 @@
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
-            "category": "Support"
+            "category": "Commerce"
           },
           "availability": {
             "status": "preview"
@@ -3232,7 +3232,7 @@
       "dev": {
         "status": "planned",
         "version": "v2.0.0",
-        "category": "Sites"
+        "category": "Site"
       },
       "pages": [
         {
@@ -3242,7 +3242,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Sites"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3253,9 +3253,9 @@
           "path": "/briancrink",
           "url": "https://websites.briancrink.com/briancrink",
           "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Sites"
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3268,7 +3268,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Sites"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3281,7 +3281,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Sites"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3292,9 +3292,9 @@
           "path": "/sharewithmiamor",
           "url": "https://websites.briancrink.com/sharewithmiamor",
           "dev": {
-            "status": "planned",
-            "version": "v2.0.0",
-            "category": "Sites"
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3307,7 +3307,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Sites"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
@@ -3320,7 +3320,7 @@
           "dev": {
             "status": "planned",
             "version": "v2.0.0",
-            "category": "Sites"
+            "category": "Site"
           },
           "availability": {
             "status": "preview"
