@@ -2033,8 +2033,8 @@
         },
         {
           "title": "Development",
-          "path": "/dev",
-          "url": "https://shop.briancrink.com/dev",
+          "path": "/development",
+          "url": "https://shop.briancrink.com/development",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
