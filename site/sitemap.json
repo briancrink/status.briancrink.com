@@ -1362,12 +1362,12 @@
           "path": "/site",
           "url": "https://dev.briancrink.com/site",
           "dev": {
-            "status": "planned",
+            "status": "released",
             "version": "v1.0.0",
             "category": "Development"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
