@@ -3233,6 +3233,19 @@
       },
       "pages": [
         {
+          "title": "API Support",
+          "path": "/api",
+          "url": "https://support.briancrink.com/api",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "App Support",
           "path": "/app",
           "url": "https://support.briancrink.com/app",
@@ -3273,8 +3286,8 @@
         },
         {
           "title": "Developer Support",
-          "path": "/dev",
-          "url": "https://support.briancrink.com/dev",
+          "path": "/developer",
+          "url": "https://support.briancrink.com/developer",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -3298,7 +3311,7 @@
           }
         },
         {
-          "title": "Storefront Support",
+          "title": "Store Support",
           "path": "/store",
           "url": "https://support.briancrink.com/store",
           "dev": {
