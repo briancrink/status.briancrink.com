@@ -167,7 +167,6 @@
 
     .version-pill {
       position: relative;
-      --pill-chroma-border: conic-gradient(from var(--border-angle), var(--pc1), var(--pc2), var(--pc3), var(--pc4), var(--pc5), var(--pc1));
       border: 1px solid transparent;
     }
 
@@ -177,7 +176,7 @@
       inset: 0;
       border-radius: inherit;
       padding: 1px;
-      background: var(--pill-chroma-border);
+      background: conic-gradient(from var(--border-angle), var(--pc1), var(--pc2), var(--pc3), var(--pc4), var(--pc5), var(--pc1));
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask-composite: exclude;
       animation: versionPillBorderSpin 8s linear infinite;
