@@ -297,6 +297,19 @@
           }
         },
         {
+          "title": "AccessEdu",
+          "path": "/accessedu",
+          "url": "https://academia.briancrink.com/accessedu",
+          "dev": {
+            "status": "planned",
+            "version": "v3.0.0",
+            "category": "Academia"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
           "title": "Contact",
           "path": "/contact",
           "url": "https://academia.briancrink.com/contact",
