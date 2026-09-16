@@ -2968,8 +2968,8 @@
         },
         {
           "title": "Development",
-          "path": "/dev",
-          "url": "https://store.briancrink.com/dev",
+          "path": "/development",
+          "url": "https://store.briancrink.com/development",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -2993,7 +2993,7 @@
           }
         },
         {
-          "title": "Storefront",
+          "title": "Shop",
           "path": "/shop",
           "url": "https://store.briancrink.com/shop",
           "dev": {
