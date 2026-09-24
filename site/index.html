@@ -1059,7 +1059,7 @@
       const lift = 0;
       const bloom = illuminate === true ? 1 : (typeof illuminate === 'number' ? illuminate : 0);
       const hi = peak == null ? 54 : peak;
-      const g0 = 40 + bloom * (hi - 40) + lift * 140; //40 default / 50 desktop ridge / 72 mobile nest
+      const g0 = 26 + bloom * (hi - 40) + lift * 140; //26 default / 50 desktop ridge / 72 mobile nest
       const a0 = Math.min(0.9, 0.85 + lift);
       const g1 = 30 + lift * 40;
       const a1 = Math.min(0.18, (0.10 + bloom * 0.06) + lift * 0.08);
