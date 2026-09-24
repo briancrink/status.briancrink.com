@@ -570,6 +570,24 @@
       padding-left: 1.31rem;
     }
 
+    @media (min-width: 701px) {
+      body[data-view="map"] .links {
+        column-width: 280px;
+        column-gap: 1.45rem;
+      }
+      body[data-view="map"] .links > div {
+        margin-bottom: 1.8rem;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      body[data-view="map"] .links {
+        column-count: 4;
+        column-width: auto;
+        column-gap: 1.7rem;
+      }
+    }
+
     @media (max-width: 600px) {
       .header { padding-left: 16px; padding-right: 16px; }
       #scroller { padding-left: 16px; padding-right: 16px; }
