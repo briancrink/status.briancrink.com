@@ -1045,12 +1045,12 @@
     let topoThemeStart = 0;
     let topoAnim = 0;
 
-    function topoStroke(t) {
+    function topoStroke(t, illuminate) {
       const lift = 0;
-      const g0 = 40 + lift * 140; //40 sets dark mode topography line opacity 
-      const a0 = Math.min(0.9, 0.85 + lift); //0.85 sets dark mode topography line opacity 
+      const g0 = (illuminate ? 54 : 40) + lift * 140; //40 default dark / 54 lamp
+      const a0 = Math.min(0.9, 0.85 + lift); //0.85 sets dark mode topography line opacity
       const g1 = 30 + lift * 40;
-      const a1 = Math.min(0.18, 0.10 + lift * 0.08); //0.10 sets light mode topography line opacity 
+      const a1 = Math.min(0.18, (illuminate ? 0.16 : 0.10) + lift * 0.08); //0.10 sets light mode topography line opacity
       const u = t < 0 ? 0 : t > 1 ? 1 : t;
       const g = Math.round(g0 + (g1 - g0) * u);
       const a = a0 + (a1 - a0) * u;
@@ -1149,13 +1149,39 @@
       topoPath = path;
     }
 
+    const topoDesktop = window.matchMedia('(min-width: 701px)');
+    const topoHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const topoPointer = { x: 0, y: 0, nx: 0.5, ny: 0.5, on: false };
+
+    function topoDesktopLive() {
+      return topoDesktop.matches && topoHover.matches;
+    }
+
     function paintTopo() {
       if (!topoCtx || !topoPath) return;
       topoCtx.clearRect(0, 0, topoW, topoH);
       topoCtx.lineWidth = 1;
       topoCtx.lineJoin = 'round';
-      topoCtx.strokeStyle = topoStroke(topoTheme);
+      const live = topoDesktopLive();
+      const ox = live ? (topoPointer.nx - 0.5) * 18 : 0;
+      const oy = live ? (topoPointer.ny - 0.5) * 12 : 0;
+      topoCtx.save();
+      topoCtx.translate(ox, oy);
+      topoCtx.strokeStyle = topoStroke(topoTheme, false);
       topoCtx.stroke(topoPath);
+      if (live && topoPointer.on) {
+        const lx = topoPointer.x - ox;
+        const ly = topoPointer.y - oy;
+        topoCtx.save();
+        topoCtx.beginPath();
+        topoCtx.arc(lx, ly, 96, 0, Math.PI * 2);
+        topoCtx.clip();
+        topoCtx.strokeStyle = topoStroke(topoTheme, true);
+        topoCtx.lineWidth = 1.05;
+        topoCtx.stroke(topoPath);
+        topoCtx.restore();
+      }
+      topoCtx.restore();
     }
 
     function resizeTopo() {
@@ -1202,6 +1228,31 @@
 
     resizeTopo();
     window.addEventListener('resize', resizeTopo);
+    window.addEventListener('pointermove', (e) => {
+      if (!topoDesktopLive()) return;
+      topoPointer.on = true;
+      topoPointer.x = e.clientX;
+      topoPointer.y = e.clientY;
+      topoPointer.nx = e.clientX / Math.max(1, window.innerWidth);
+      topoPointer.ny = e.clientY / Math.max(1, window.innerHeight);
+      paintTopo();
+    }, { passive: true });
+    window.addEventListener('pointerleave', () => {
+      topoPointer.on = false;
+      paintTopo();
+    });
+    function onTopoDesktopChange() {
+      if (!topoDesktopLive()) {
+        topoPointer.on = false;
+        topoPointer.nx = 0.5;
+        topoPointer.ny = 0.5;
+      }
+      paintTopo();
+    }
+    if (topoDesktop.addEventListener) {
+      topoDesktop.addEventListener('change', onTopoDesktopChange);
+      topoHover.addEventListener('change', onTopoDesktopChange);
+    }
 
     const DEV_LABEL = {
       planned: 'Planned',
