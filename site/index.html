@@ -1055,12 +1055,14 @@
     let topoThemeStart = 0;
     let topoAnim = 0;
 
-    function topoStroke(t, illuminate) {
+    function topoStroke(t, illuminate, peak) {
       const lift = 0;
-      const g0 = (illuminate ? 54 : 40) + lift * 140; //40 default dark / 54 lamp
-      const a0 = Math.min(0.9, 0.85 + lift); //0.85 sets dark mode topography line opacity
+      const bloom = illuminate === true ? 1 : (typeof illuminate === 'number' ? illuminate : 0);
+      const hi = peak == null ? 54 : peak;
+      const g0 = 40 + bloom * (hi - 40) + lift * 140; //40 default / 50 desktop ridge / 72 mobile nest
+      const a0 = Math.min(0.9, 0.85 + lift);
       const g1 = 30 + lift * 40;
-      const a1 = Math.min(0.18, (illuminate ? 0.16 : 0.10) + lift * 0.08); //0.10 sets light mode topography line opacity
+      const a1 = Math.min(0.18, (0.10 + bloom * 0.06) + lift * 0.08);
       const u = t < 0 ? 0 : t > 1 ? 1 : t;
       const g = Math.round(g0 + (g1 - g0) * u);
       const a = a0 + (a1 - a0) * u;
@@ -1072,6 +1074,8 @@
     let topoW = 0;
     let topoH = 0;
     let topoPath = null;
+    let topoLoops = [];
+    let topoNests = [];
 
     function hash2(ix, iy) {
       let n = (ix * 374761393 + iy * 668265263) | 0;
@@ -1093,22 +1097,25 @@
       return v00 * (1 - sx) * (1 - sy) + v10 * sx * (1 - sy) + v01 * (1 - sx) * sy + v11 * sx * sy;
     }
 
+    function ridgeN(x, y) {
+      const n = noise2(x, y);
+      return 1 - Math.abs(n * 2 - 1);
+    }
+
     function heightAt(x, y) {
-      const wx = noise2(x * 0.004 + 21, y * 0.004 + 7) * 18;
-      const wy = noise2(x * 0.004 + 3, y * 0.004 + 41) * 18;
-      const nx = (x + wx) * 0.016;
-      const ny = (y + wy) * 0.016;
-      let h = noise2(nx, ny) * 0.42
-        + noise2(nx * 2.2 + 8, ny * 2.2) * 0.26
-        + noise2(nx * 4.4 + 19, ny * 4.4) * 0.16
-        + noise2(nx * 8.1 + 33, ny * 8.1) * 0.10
-        + noise2(x * 0.007 + 50, y * 0.007) * 0.06;
-      return h;
+      const wx = noise2(x * 0.0019 + 21, y * 0.0019 + 7) * 32;
+      const wy = noise2(x * 0.0019 + 3, y * 0.0019 + 41) * 32;
+      const nx = (x + wx) * 0.0088;
+      const ny = (y + wy) * 0.0088;
+      return ridgeN(nx, ny) * 0.48
+        + ridgeN(nx * 1.85 + 8, ny * 1.85) * 0.28
+        + ridgeN(nx * 3.1 + 19, ny * 3.1) * 0.12
+        + noise2(nx * 5.4 + 33, ny * 5.4) * 0.05;
     }
 
     function buildTopoPath() {
       if (!topoCtx) return;
-      const cell = 14;
+      const cell = 12;
       const cols = Math.ceil(topoW / cell);
       const rows = Math.ceil(topoH / cell);
       const field = new Float32Array((cols + 1) * (rows + 1));
@@ -1119,12 +1126,19 @@
         }
       }
       const levels = [];
-      for (let v = 0.22; v <= 0.82; v += 0.06) levels.push(v);
+      for (let v = 0.18; v <= 0.84; v += 0.048) levels.push(v);
       const path = new Path2D();
+      const rawByLevel = new Map();
       function interp(a, b, level) {
         const d = b - a;
         if (Math.abs(d) < 1e-6) return 0.5;
         return (level - a) / d;
+      }
+      function pushSeg(x0, y0, x1, y1, level) {
+        path.moveTo(x0, y0);
+        path.lineTo(x1, y1);
+        if (!rawByLevel.has(level)) rawByLevel.set(level, []);
+        rawByLevel.get(level).push(x0, y0, x1, y1);
       }
       for (let li = 0; li < levels.length; li++) {
         const level = levels[li];
@@ -1146,17 +1160,19 @@
             if ((code & 4) !== (code & 8) >> 1) pts.push([c + interp(v3, v2, level), r + 1]);
             if ((code & 8) !== (code & 1)) pts.push([c, r + interp(v0, v3, level)]);
             if (pts.length >= 2) {
-              path.moveTo(pts[0][0] * cell, pts[0][1] * cell);
-              path.lineTo(pts[1][0] * cell, pts[1][1] * cell);
+              pushSeg(pts[0][0] * cell, pts[0][1] * cell, pts[1][0] * cell, pts[1][1] * cell, level);
               if (pts.length === 4) {
-                path.moveTo(pts[2][0] * cell, pts[2][1] * cell);
-                path.lineTo(pts[3][0] * cell, pts[3][1] * cell);
+                pushSeg(pts[2][0] * cell, pts[2][1] * cell, pts[3][0] * cell, pts[3][1] * cell, level);
               }
             }
           }
         }
       }
       topoPath = path;
+      topoLoops = [];
+      for (let li = 0; li < levels.length; li++) {
+        topoLoops = topoLoops.concat(traceLevelLoops(field, cols, rows, stride, cell, levels[li]));
+      }
     }
 
     const topoDesktop = window.matchMedia('(min-width: 701px)');
@@ -1165,6 +1181,257 @@
 
     function topoDesktopLive() {
       return topoDesktop.matches && topoHover.matches;
+    }
+
+    const TOPO_BLOOM_RISE = 800;
+    const TOPO_BLOOM_STAGGER = 160;
+    const TOPO_BLOOM_HOLD = 2000;
+    const TOPO_BLOOM_FADE = 900;
+    const TOPO_BLOOM_GAP = 1000;
+    let topoBloomRaf = 0;
+    let topoBloomSeq = null;
+
+    function topoMobileLive() {
+      return !topoDesktopLive();
+    }
+
+    function traceLevelLoops(field, cols, rows, stride, cell, level) {
+      function interp(a, b) {
+        const d = b - a;
+        return Math.abs(d) < 1e-6 ? 0.5 : (level - a) / d;
+      }
+      function ptTop(c, r) {
+        const t = interp(field[r * stride + c], field[r * stride + c + 1]);
+        return { x: (c + t) * cell, y: r * cell };
+      }
+      function ptRight(c, r) {
+        const t = interp(field[r * stride + c + 1], field[(r + 1) * stride + c + 1]);
+        return { x: (c + 1) * cell, y: (r + t) * cell };
+      }
+      function ptBottom(c, r) { return ptTop(c, r + 1); }
+      function ptLeft(c, r) { return ptRight(c - 1, r); }
+      const T = (c, r) => 'T:' + c + ':' + r;
+      const R = (c, r) => 'R:' + c + ':' + r;
+      const adj = new Map();
+      function link(a, b, p0, p1) {
+        if (!adj.has(a)) adj.set(a, []);
+        if (!adj.has(b)) adj.set(b, []);
+        adj.get(a).push({ to: b, x: p1.x, y: p1.y, x0: p0.x, y0: p0.y });
+        adj.get(b).push({ to: a, x: p0.x, y: p0.y, x0: p1.x, y0: p1.y });
+      }
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const v0 = field[r * stride + c];
+          const v1 = field[r * stride + c + 1];
+          const v2 = field[(r + 1) * stride + c + 1];
+          const v3 = field[(r + 1) * stride + c];
+          let code = 0;
+          if (v0 >= level) code |= 1;
+          if (v1 >= level) code |= 2;
+          if (v2 >= level) code |= 4;
+          if (v3 >= level) code |= 8;
+          if (!code || code === 15) continue;
+          const top = T(c, r), right = R(c, r), bottom = T(c, r + 1), left = R(c - 1, r);
+          const pT = ptTop(c, r), pR = ptRight(c, r), pB = ptBottom(c, r), pL = ptLeft(c, r);
+          const pairs = [];
+          switch (code) {
+            case 1: case 14: pairs.push([left, top, pL, pT]); break;
+            case 2: case 13: pairs.push([top, right, pT, pR]); break;
+            case 3: case 12: pairs.push([left, right, pL, pR]); break;
+            case 4: case 11: pairs.push([right, bottom, pR, pB]); break;
+            case 6: case 9: pairs.push([top, bottom, pT, pB]); break;
+            case 7: case 8: pairs.push([left, bottom, pL, pB]); break;
+            case 5:
+              pairs.push([left, top, pL, pT]);
+              pairs.push([right, bottom, pR, pB]);
+              break;
+            case 10:
+              pairs.push([top, right, pT, pR]);
+              pairs.push([left, bottom, pL, pB]);
+              break;
+          }
+          for (let i = 0; i < pairs.length; i++) link(pairs[i][0], pairs[i][1], pairs[i][2], pairs[i][3]);
+        }
+      }
+      const used = new Set();
+      const ekey = (a, b) => (a < b ? a + '|' + b : b + '|' + a);
+      const loops = [];
+      adj.forEach((nbrs, start) => {
+        for (let n = 0; n < nbrs.length; n++) {
+          const first = nbrs[n];
+          if (used.has(ekey(start, first.to))) continue;
+          const pts = [{ x: first.x0, y: first.y0 }];
+          let curr = start;
+          let next = first.to;
+          let closed = false;
+          for (let step = 0; step < 8000; step++) {
+            used.add(ekey(curr, next));
+            const hop = (adj.get(curr) || []).find((h) => h.to === next);
+            if (hop) pts.push({ x: hop.x, y: hop.y });
+            if (next === start && step > 1) { closed = true; break; }
+            const options = adj.get(next) || [];
+            let found = null;
+            for (let i = 0; i < options.length; i++) {
+              if (options[i].to === curr) continue;
+              if (used.has(ekey(next, options[i].to)) && options[i].to !== start) continue;
+              found = options[i];
+              break;
+            }
+            if (!found) break;
+            curr = next;
+            next = found.to;
+          }
+          if (!closed || pts.length < 4) continue;
+          let area = 0, cx = 0, cy = 0;
+          for (let i = 0; i < pts.length - 1; i++) {
+            area += pts[i].x * pts[i + 1].y - pts[i + 1].x * pts[i].y;
+            cx += pts[i].x;
+            cy += pts[i].y;
+          }
+          area = Math.abs(area) * 0.5;
+          if (area < 8) continue;
+          loops.push({
+            pts: pts,
+            area: area,
+            cx: cx / Math.max(1, pts.length - 1),
+            cy: cy / Math.max(1, pts.length - 1)
+          });
+        }
+      });
+      return loops;
+    }
+
+    function pointInLoop(x, y, loop) {
+      const pts = loop.pts;
+      let inside = false;
+      for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
+        const xi = pts[i].x, yi = pts[i].y, xj = pts[j].x, yj = pts[j].y;
+        if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / ((yj - yi) || 1e-6) + xi) inside = !inside;
+      }
+      return inside;
+    }
+
+    function loopInside(inner, outer) {
+      if (!inner || !outer || inner === outer) return false;
+      if (inner.area >= outer.area * 0.98) return false;
+      const pts = inner.pts;
+      if (pointInLoop(inner.cx, inner.cy, outer)) return true;
+      const step = Math.max(1, Math.floor(pts.length / 10));
+      let hits = 0;
+      let n = 0;
+      for (let i = 0; i < pts.length; i += step) {
+        n++;
+        if (pointInLoop(pts[i].x, pts[i].y, outer)) hits++;
+      }
+      return n > 0 && hits >= Math.max(1, Math.ceil(n * 0.35));
+    }
+
+    let topoNestIndex = 0;
+
+    function buildTopoNests() {
+      const viewH = Math.min(topoH, window.innerHeight || topoH);
+      const viewA = Math.max(1, (topoW || 1) * viewH);
+      const minOuter = viewA * 0.018;
+      const maxOuter = viewA * 0.36;
+      const usable = topoLoops.filter((loop) => loop.cy < viewH * 1.15 && loop.area > 8);
+      const nests = [];
+      usable.forEach((outer) => {
+        if (outer.area < minOuter || outer.area > maxOuter) return;
+        const inner = usable.filter((loop) => loopInside(loop, outer)).sort((a, b) => b.area - a.area);
+        if (inner.length < 2) return;
+        nests.push([outer].concat(inner));
+      });
+      nests.sort((a, b) => b.length - a.length || b[0].area - a[0].area);
+      topoNests = nests.slice(0, 28);
+      topoNestIndex = 0;
+    }
+
+    function nestBloomSpan(nest) {
+      const n = nest && nest.length ? nest.length : 1;
+      const filled = TOPO_BLOOM_RISE + Math.max(0, n - 1) * TOPO_BLOOM_STAGGER;
+      return filled + TOPO_BLOOM_HOLD + TOPO_BLOOM_FADE + TOPO_BLOOM_GAP;
+    }
+
+    function nestBloomAmount(elapsed, index, nestSize) {
+      const riseStart = index * TOPO_BLOOM_STAGGER;
+      const allLit = TOPO_BLOOM_RISE + Math.max(0, nestSize - 1) * TOPO_BLOOM_STAGGER;
+      const fadeStart = allLit + TOPO_BLOOM_HOLD;
+      const fadeEnd = fadeStart + TOPO_BLOOM_FADE;
+      if (elapsed < riseStart) return 0;
+      if (elapsed < fadeStart) return Math.min(1, (elapsed - riseStart) / TOPO_BLOOM_RISE);
+      if (elapsed < fadeEnd) return 1 - (elapsed - fadeStart) / TOPO_BLOOM_FADE;
+      return 0;
+    }
+
+    function spawnTopoBloom(now) {
+      if (!topoNests.length) buildTopoNests();
+      if (!topoNests.length) return;
+      const nest = topoNests[topoNestIndex % topoNests.length];
+      topoNestIndex += 1;
+      topoBloomSeq = { nest: nest, t0: now };
+    }
+
+    const TOPO_RIDGE_MS = 220;
+    let topoRidge = { nest: null, amount: 0, leaving: null, leaveAmt: 0 };
+    let topoRidgeRaf = 0;
+    let topoRidgeLast = 0;
+
+    function nestAtPoint(x, y) {
+      if (!topoLoops.length) return null;
+      const viewA = Math.max(1, (topoW || 1) * Math.min(topoH || 1, window.innerHeight || topoH || 1));
+      const hit = [];
+      for (let i = 0; i < topoLoops.length; i++) {
+        if (pointInLoop(x, y, topoLoops[i])) hit.push(topoLoops[i]);
+      }
+      if (!hit.length) return null;
+      hit.sort((a, b) => a.area - b.area);
+      const mid = hit.filter((loop) => loop.area > viewA * 0.01 && loop.area < viewA * 0.32);
+      const outer = mid.length ? mid[mid.length - 1] : hit[Math.min(1, hit.length - 1)];
+      const inner = topoLoops.filter((loop) => loopInside(loop, outer)).sort((a, b) => b.area - a.area);
+      return [outer].concat(inner);
+    }
+
+    function setRidgeNest(next) {
+      const same = topoRidge.nest && next && topoRidge.nest[0] === next[0];
+      if (same) return;
+      if (topoRidge.nest && topoRidge.amount > 0.02) {
+        topoRidge.leaving = topoRidge.nest;
+        topoRidge.leaveAmt = topoRidge.amount;
+      }
+      topoRidge.nest = next;
+      topoRidge.amount = next ? 0.02 : 0;
+      ensureRidgeFade();
+    }
+
+    function tickRidgeFade(now) {
+      const dt = Math.min(40, now - (topoRidgeLast || now));
+      topoRidgeLast = now;
+      const step = dt / TOPO_RIDGE_MS;
+      if (topoRidge.nest) topoRidge.amount = Math.min(1, topoRidge.amount + step);
+      if (topoRidge.leaving) {
+        topoRidge.leaveAmt = Math.max(0, topoRidge.leaveAmt - step);
+        if (topoRidge.leaveAmt <= 0) topoRidge.leaving = null;
+      }
+      paintTopo();
+      const busy = (topoRidge.nest && topoRidge.amount < 1) || topoRidge.leaving;
+      if (busy) topoRidgeRaf = requestAnimationFrame(tickRidgeFade);
+      else topoRidgeRaf = 0;
+    }
+
+    function ensureRidgeFade() {
+      if (!topoRidgeRaf) {
+        topoRidgeLast = performance.now();
+        topoRidgeRaf = requestAnimationFrame(tickRidgeFade);
+      }
+    }
+
+    function strokeLoop(ctx, loop) {
+      const pts = loop.pts;
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y);
+      ctx.closePath();
+      ctx.stroke();
     }
 
     function paintTopo() {
@@ -1179,17 +1446,30 @@
       topoCtx.translate(ox, oy);
       topoCtx.strokeStyle = topoStroke(topoTheme, false);
       topoCtx.stroke(topoPath);
-      if (live && topoPointer.on) {
-        const lx = topoPointer.x - ox;
-        const ly = topoPointer.y - oy;
-        topoCtx.save();
-        topoCtx.beginPath();
-        topoCtx.arc(lx, ly, 96, 0, Math.PI * 2);
-        topoCtx.clip();
-        topoCtx.strokeStyle = topoStroke(topoTheme, true);
-        topoCtx.lineWidth = 1.05;
-        topoCtx.stroke(topoPath);
-        topoCtx.restore();
+      if (live) {
+        function paintRidgeNest(nest, amount) {
+          if (!nest || amount <= 0) return;
+          topoCtx.lineWidth = 1.12;
+          for (let i = 0; i < nest.length; i++) {
+            topoCtx.strokeStyle = topoStroke(topoTheme, amount, 50);
+            strokeLoop(topoCtx, nest[i]);
+          }
+          topoCtx.lineWidth = 1;
+        }
+        paintRidgeNest(topoRidge.leaving, topoRidge.leaveAmt);
+        paintRidgeNest(topoRidge.nest, topoRidge.amount);
+      } else if (!live && topoBloomSeq && topoBloomSeq.nest) {
+        const now = performance.now();
+        const nest = topoBloomSeq.nest;
+        const elapsed = now - topoBloomSeq.t0;
+        for (let i = 0; i < nest.length; i++) {
+          const amount = nestBloomAmount(elapsed, i, nest.length);
+          if (amount <= 0) continue;
+          topoCtx.strokeStyle = topoStroke(topoTheme, amount, 72);
+          topoCtx.lineWidth = 1.15;
+          strokeLoop(topoCtx, nest[i]);
+        }
+        topoCtx.lineWidth = 1;
       }
       topoCtx.restore();
     }
@@ -1205,6 +1485,7 @@
       topoCanvas.style.height = topoH + 'px';
       topoCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
       buildTopoPath();
+      buildTopoNests();
       paintTopo();
     }
 
@@ -1245,12 +1526,40 @@
       topoPointer.y = e.clientY;
       topoPointer.nx = e.clientX / Math.max(1, window.innerWidth);
       topoPointer.ny = e.clientY / Math.max(1, window.innerHeight);
+      const ox = (topoPointer.nx - 0.5) * 18;
+      const oy = (topoPointer.ny - 0.5) * 12;
+      setRidgeNest(nestAtPoint(e.clientX - ox, e.clientY - oy));
       paintTopo();
     }, { passive: true });
     window.addEventListener('pointerleave', () => {
       topoPointer.on = false;
+      setRidgeNest(null);
       paintTopo();
     });
+    function tickTopoBloom(now) {
+      if (!topoMobileLive() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        topoBloomRaf = 0;
+        paintTopo();
+        return;
+      }
+      const seq = topoBloomSeq;
+      const span = seq && seq.nest ? nestBloomSpan(seq.nest) : 0;
+      if (!seq || now - seq.t0 > span) spawnTopoBloom(now);
+      paintTopo();
+      topoBloomRaf = requestAnimationFrame(tickTopoBloom);
+    }
+
+    function ensureTopoBloom() {
+      if (!topoMobileLive() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (topoBloomRaf) {
+          cancelAnimationFrame(topoBloomRaf);
+          topoBloomRaf = 0;
+        }
+        return;
+      }
+      if (!topoBloomRaf) topoBloomRaf = requestAnimationFrame(tickTopoBloom);
+    }
+
     function onTopoDesktopChange() {
       if (!topoDesktopLive()) {
         topoPointer.on = false;
@@ -1258,11 +1567,13 @@
         topoPointer.ny = 0.5;
       }
       paintTopo();
+      ensureTopoBloom();
     }
     if (topoDesktop.addEventListener) {
       topoDesktop.addEventListener('change', onTopoDesktopChange);
       topoHover.addEventListener('change', onTopoDesktopChange);
     }
+    ensureTopoBloom();
 
     const DEV_LABEL = {
       planned: 'Planned',
