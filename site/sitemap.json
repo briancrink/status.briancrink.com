@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-10-10",
   "source": "site.briancrink.com/map",
   "modes": {
     "development": {
@@ -64,12 +64,12 @@
           "path": "/business",
           "url": "https://briancrink.com/business",
           "dev": {
-            "status": "planned",
-            "version": "v5.0.0",
+            "status": "released",
+            "version": "v1.0.0",
             "category": "Commerce"
           },
           "availability": {
-            "status": "preview"
+            "status": "live"
           }
         },
         {
@@ -706,18 +706,18 @@
       "url": "https://business.briancrink.com",
       "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"13\" rx=\"2\"/><path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"/></svg>",
       "dev": {
-        "status": "planned",
-        "version": "v5.0.0",
+        "status": "released",
+        "version": "v1.0.0",
         "category": "Commerce"
       },
       "pages": [
         {
-          "title": "Contact",
-          "path": "/contact",
-          "url": "https://business.briancrink.com/contact",
+          "title": "CareerOS",
+          "path": "/careeros",
+          "url": "https://business.briancrink.com/careeros",
           "dev": {
-            "status": "planned",
-            "version": "v5.0.0",
+            "status": "in-development",
+            "version": "v1.0.0",
             "category": "Commerce"
           },
           "availability": {
@@ -725,9 +725,9 @@
           }
         },
         {
-          "title": "Employment",
-          "path": "/hire",
-          "url": "https://business.briancrink.com/hire",
+          "title": "Contact",
+          "path": "/contact",
+          "url": "https://business.briancrink.com/contact",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -751,9 +751,9 @@
           }
         },
         {
-          "title": "Inquiry",
-          "path": "/inquiry",
-          "url": "https://business.briancrink.com/inquiry",
+          "title": "Feed",
+          "path": "/feed",
+          "url": "https://business.briancrink.com/feed",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -764,9 +764,22 @@
           }
         },
         {
-          "title": "Newsfeed",
-          "path": "/feed",
-          "url": "https://business.briancrink.com/feed",
+          "title": "Hire",
+          "path": "/hire",
+          "url": "https://business.briancrink.com/hire",
+          "dev": {
+            "status": "planned",
+            "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Inquiry",
+          "path": "/inquiry",
+          "url": "https://business.briancrink.com/inquiry",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
@@ -816,12 +829,38 @@
           }
         },
         {
+          "title": "Startup",
+          "path": "/startup",
+          "url": "https://business.briancrink.com/startup",
+          "dev": {
+            "status": "released",
+            "version": "v1.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+        {
           "title": "Storefront",
           "path": "/store",
           "url": "https://business.briancrink.com/store",
           "dev": {
             "status": "planned",
             "version": "v5.0.0",
+            "category": "Commerce"
+          },
+          "availability": {
+            "status": "preview"
+          }
+        },
+        {
+          "title": "Streamline",
+          "path": "/streamline",
+          "url": "https://business.briancrink.com/streamline",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
             "category": "Commerce"
           },
           "availability": {
@@ -843,7 +882,7 @@
         }
       ],
       "availability": {
-        "status": "preview"
+        "status": "live"
       }
     },
     {
@@ -1157,6 +1196,61 @@
           },
           "availability": {
             "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "demo",
+      "host": "demo.briancrink.com",
+      "url": "https://demo.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Adopt a Cat",
+          "path": "/adopt/cat",
+          "url": "https://demo.briancrink.com/adopt/cat",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Dog",
+          "path": "/adopt/dog",
+          "url": "https://demo.briancrink.com/adopt/dog",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Pet",
+          "path": "/adopt/pet",
+          "url": "https://demo.briancrink.com/adopt/pet",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
           }
         }
       ],
@@ -3584,6 +3678,61 @@
           },
           "availability": {
             "status": "preview"
+          }
+        }
+      ],
+      "availability": {
+        "status": "preview"
+      }
+    },
+    {
+      "subdomain": "template",
+      "host": "template.briancrink.com",
+      "url": "https://template.briancrink.com",
+      "icon": "<svg class=\"domain-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"8 6 2 12 8 18\"/><line x1=\"13.3\" y1=\"6.2\" x2=\"10.7\" y2=\"17.8\"/><polyline points=\"16 6 22 12 16 18\"/></svg>",
+      "dev": {
+        "status": "planned",
+        "version": "v1.0.0",
+        "category": "Development"
+      },
+      "pages": [
+        {
+          "title": "Adopt a Cat",
+          "path": "/adopt/cat",
+          "url": "https://template.briancrink.com/adopt/cat",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Dog",
+          "path": "/adopt/dog",
+          "url": "https://template.briancrink.com/adopt/dog",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
+          }
+        },
+                {
+          "title": "Adopt a Pet",
+          "path": "/adopt/pet",
+          "url": "https://template.briancrink.com/adopt/pet",
+          "dev": {
+            "status": "in-development",
+            "version": "v1.0.0",
+            "category": "Development"
+          },
+          "availability": {
+            "status": "live"
           }
         }
       ],
